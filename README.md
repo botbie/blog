@@ -1,0 +1,2 @@
+# blog
+Botbie Static Blog
