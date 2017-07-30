@@ -44,3 +44,5 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
+  - circle.yml
+  - scripts
