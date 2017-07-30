@@ -14,16 +14,12 @@ description: "Lãng du đi vô định cánh trym trời"
 author: 'Thien Le'
 # edit 'categories' in the front matter of every post to match this username
 nickname: nguquen
-bio: 'A paranormal expert and his daughter bunk in an abandoned house populated by 3 mischievous ghosts and one friendly one.'
-location: 'Maine, USA'
-url: 'http://botbie.github.io/blog/'
+bio: 'Ngủ để mà quên...'
+location: 'Nowhere'
 image: 'assets/images/casper.png'
 
-short_url: 'botbie.github.io/blog/'
 google_analytics: UA-69281367-1
 disqus: botbie
-# edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /blog/
 
 # Permalinks
 permalink: /:title
