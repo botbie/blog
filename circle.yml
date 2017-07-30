@@ -1,0 +1,11 @@
+machine:
+  environment:
+    USER_NAME: nguquen
+    USER_EMAIL: thienlduc@gmail.com
+  ruby:
+    version: 2.3.0
+
+test:
+  override:
+    - bundle exec jekyll build
+
