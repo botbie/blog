@@ -6,7 +6,7 @@ git clone $ORIGIN_URL deployment
 cd deployment
 
 # Delete and move files.
-find . -maxdepth 1 ! -name '.' ! -name '..' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
+find . -maxdepth 1 ! -name '.' ! -name '..' ! -name 'CNAME' ! -name '.git' ! -name '.gitignore' -exec rm -rf {} \;
 mv ../blog/_site/* .
 
 # Push to gh-pages.
