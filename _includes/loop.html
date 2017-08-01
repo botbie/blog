@@ -15,26 +15,27 @@
 
     <!-- This is the post loop - each post will be output using this markup -->
     {% for post in paginator.posts %}
+    {% assign author = site.data.authors[post.author] %}
     <article class="post">
         <header class="post-header">
-            <h2 class="post-title"><a href="{{ site.baseurl }}{{ post.url | remove: '/' }}">{{ post.title }}</a></h2>
+            <h2 class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         </header>
         <section class="post-excerpt">
-            <p>{{ post.content | strip_html | truncatewords: 26 }} <a class="read-more" href="{{ site.baseurl }}{{ post.url | remove: '/' }}">&raquo;</a></p>
+            <p>{{ post.content | strip_html | truncatewords: 26 }} <a class="read-more" href="{{ post.url | relative_url }}">&raquo;</a></p>
         </section>
         <footer class="post-meta">
-            {% if site.image %}<img class="author-thumb" src="{{ site.baseurl }}{{ site.image }}" alt="Author image" nopin="nopin" />{% endif %}
+            {% if author.avatar %}<img class="author-thumb" src="{{ author.avatar | relative_url }}" alt="Author image" nopin="nopin" />{% endif %}
             <!-- author -->
-            <a href='{{ site.baseurl }}author/{{ site.nickname }}'>{{ site.author }}</a>
+            <a href='{{ site.baseurl }}/author/{{ author.username }}'>{{ author.name }}</a>
             <!-- [[tags prefix=" on "]] -->
-            {% if post.tags.size > 0 %} 
-                on 
+            {% if post.tags.size > 0 %}
+                on
                 {% for tag in post.tags %}
                     {% if forloop.index == post.tags.size %}
-                       <a href='{{ site.baseurl }}tag/{{ tag }}'>{{ tag | capitalize }}</a>
+                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>
                     {% else %}
-                       <a href='{{ site.baseurl }}tag/{{ tag }}'>{{ tag | capitalize }}</a>,
-                    {% endif %}   
+                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>,
+                    {% endif %}
                 {% endfor %}
             {% endif %}
             <time class="post-date" datetime="{{ post.date | date:'%Y-%m-%d' }}">{{ post.date | date_to_string }}</time>

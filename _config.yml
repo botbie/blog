@@ -10,27 +10,19 @@ language: 'en-uk'
 name: 'Botbie Blog'
 description: "Lãng du đi vô định cánh trym trời"
 
-# Author's info
-author: 'Thien Le'
-# edit 'categories' in the front matter of every post to match this username
-nickname: nguquen
-bio: 'Ngủ để mà quên...'
-location: 'Nowhere'
-image: 'assets/images/casper.png'
-
 google_analytics: UA-69281367-1
 disqus: botbie
 
 # Permalinks
-permalink: /:title
-# permalink: /author/:username
-# permalink: /tag/:tag
-
+permalink: /:year/:month/:day/:title
 
 # gems and other configs
-gems: [jekyll-paginate]
-exclude: [vendor]
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
 
+# exclude files
 exclude:
   - README.md
   - Rakefile
@@ -42,3 +34,13 @@ exclude:
   - .travis.yml
   - circle.yml
   - scripts
+
+# paginate
+paginate: 9
+paginate_path: "/page/:num/"
+# paginate_category_basepath: '/category/:name/'
+# paginate_category_layout: 'categories.html'
+# paginate_tag_basepath: '/tag/:name/'
+# paginate_tag_layout: 'tags.html'
+paginate_author_basepath: '/author/:name/'
+paginate_author_layout: 'author.html'

@@ -1,0 +1,18 @@
+nguquen:
+  username: nguquen
+  avatar: /assets/images/avatars/thien.png
+  cover: /assets/images/covers/thien.jpg
+  name: Thien Le
+  location: Nowhere
+  intro: >
+    Ngủ để mà quên...
+
+casper:
+  username: casper
+  avatar: /assets/images/avatars/casper.png
+  cover: /assets/images/covers/casper.jpg
+  name: Casper Ghost
+  location: In the shell
+  intro: >
+    I'm a ghost...
+

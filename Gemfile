@@ -1,9 +1,14 @@
 source "https://rubygems.org"
+ruby '2.3.0'
 
-gem "jekyll", "~> 3.0.3"
-#gem "rdiscount", "~> 2.1.7"
-#gem "pygments.rb", "~> 0.6.3"
-#gem 'kramdown', '~> 1.8'
-#gem 'rouge', '~> 1.10', '>= 1.10.1'
-gem "github-pages", "~> 66"
-gem "rake", "~> 10.1.1"
+gem 'jekyll'
+
+group :jekyll_plugins do
+  gem 'jekyll-feed'
+  gem 'jekyll-paginate'
+  gem 'jekyll-sitemap'
+end
+
+group :development do
+  gem 'neovim'
+end
