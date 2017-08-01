@@ -5,8 +5,8 @@ module Jekyll
     module Categories
 
       # Internal requires
-      autoload :CategoryPage, 'jekyll-paginate-categories/category-page'
-      autoload :Pager, 'jekyll-paginate-categories/pager'
+      autoload :CategoryPage, 'jekyll-paginate-category/category-page'
+      autoload :Pager, 'jekyll-paginate-category/pager'
 
       # Per-category pagination.
       # Based on jekyll-paginate.

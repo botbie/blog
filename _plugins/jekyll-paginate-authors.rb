@@ -5,8 +5,8 @@ module Jekyll
     module Authors
 
       # Internal requires
-      autoload :AuthorPage, 'jekyll-paginate-authors/author-page'
-      autoload :Pager, 'jekyll-paginate-authors/pager'
+      autoload :AuthorPage, 'jekyll-paginate-author/author-page'
+      autoload :Pager, 'jekyll-paginate-author/pager'
 
       # Per-author pagination.
       # Based on jekyll-paginate.

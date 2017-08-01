@@ -5,8 +5,8 @@ module Jekyll
     module Tags
 
       # Internal requires
-      autoload :TagPage, 'jekyll-paginate-tags/tag-page'
-      autoload :Pager, 'jekyll-paginate-tags/pager'
+      autoload :TagPage, 'jekyll-paginate-tag/tag-page'
+      autoload :Pager, 'jekyll-paginate-tag/pager'
 
       # Per-tag pagination.
       # Based on jekyll-paginate.
