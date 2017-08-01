@@ -5,11 +5,13 @@
     </a>
     <ul>
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/">Home</a></li>
+        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/author/">Author</a></li>
         <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/about">About</a></li>
-        <li class="nav-fables {% if page.url contains 'fables' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/tag/fables">Fables</a></li>
-        <li class="nav-speeches {% if page.url contains 'speeches' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/tag/speeches">Speeches</a></li>
-        <li class="nav-fiction {% if page.url contains 'fiction' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/tag/fiction">Fiction</a></li>
-        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/author/casper">Author</a></li>
+        {% for tag in site.tags %}
+        {% assign tagSlug = tag[0] | slugify %}
+        {% assign tagName = tag[0] | capitalize %}
+        <li class="nav-speeches {% if page.url contains tagSlug %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/tag/{{ tagSlug }}">{{ tagName }}</a></li>
+        {% endfor %}
     </ul>
     <a class="subscribe-button icon-feed" href="{{ site.baseurl }}/feed.xml">Subscribe</a>
 </div>

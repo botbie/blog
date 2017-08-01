@@ -11,9 +11,9 @@ class: 'post-template'
 <!-- Everything inside the #post tags pulls data from the post -->
 <!-- #post -->
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ site.baseurl }}/{{ page.cover }}) {% else %}no-cover{% endif %}">
+<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}) {% else %}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        {% if page.logo %}<a class="blog-logo" href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/{{ page.logo }}" alt="Blog Logo" /></a>{% endif %}
+      {% if page.logo %}<a class="blog-logo" href="{{ "/" | relative_url }}"><img src="{{ page.logo | relative_url }}" alt="Blog Logo" /></a>{% endif %}
         {% if page.navigation %}
             <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
         {% endif %}
@@ -27,16 +27,15 @@ class: 'post-template'
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-            <!-- <a href='{{ site.baseurl }}/{{ page.about }}'>{{ site.author }}</a> -->
             <time class="post-date" datetime="{{ page.date | date:'%Y-%m-%d' }}">{{ page.date | date_to_string }}</time>
                 <!-- [[tags prefix=" on "]] -->
                 {% if page.tags.size > 0 %}
                 on
                 {% for tag in page.tags %}
                     {% if forloop.index == page.tags.size %}
-                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>
+                       <a href='{{ site.baseurl }}/tag/{{ tag | slugify }}'>{{ tag | capitalize }}</a>
                     {% else %}
-                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>,
+                       <a href='{{ site.baseurl }}/tag/{{ tag | slugify }}'>{{ tag | capitalize }}</a>,
                     {% endif %}
                 {% endfor %}
                 {% endif %}

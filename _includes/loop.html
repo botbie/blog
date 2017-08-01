@@ -32,9 +32,9 @@
                 on
                 {% for tag in post.tags %}
                     {% if forloop.index == post.tags.size %}
-                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>
+                       <a href='{{ site.baseurl }}/tag/{{ tag | slugify }}'>{{ tag | capitalize }}</a>
                     {% else %}
-                       <a href='{{ site.baseurl }}/tag/{{ tag }}'>{{ tag | capitalize }}</a>,
+                       <a href='{{ site.baseurl }}/tag/{{ tag | slugify }}'>{{ tag | capitalize }}</a>,
                     {% endif %}
                 {% endfor %}
             {% endif %}

@@ -37,10 +37,8 @@ exclude:
 
 # paginate
 paginate: 9
-paginate_path: "/page/:num/"
-# paginate_category_basepath: '/category/:name/'
-# paginate_category_layout: 'categories.html'
-# paginate_tag_basepath: '/tag/:name/'
-# paginate_tag_layout: 'tags.html'
+paginate_path: '/page/:num/'
+paginate_tag_basepath: '/tag/:name/'
+paginate_tag_layout: 'tag.html'
 paginate_author_basepath: '/author/:name/'
 paginate_author_layout: 'author.html'
