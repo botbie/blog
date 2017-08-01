@@ -3,8 +3,6 @@ machine:
     USER_NAME: nguquen
     USER_EMAIL: thienlduc@gmail.com
     ORIGIN_URL: git@github.com:botbie/botbie.github.io.git
-  ruby:
-    version: 2.3.0
 
 test:
   override:
