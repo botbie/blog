@@ -1,6 +1,7 @@
 ---
 layout: default
 disqus: false
+comments: false
 class: 'post-template'
 ---
 <!-- < default -->
@@ -92,9 +93,8 @@ class: 'post-template'
                 </a>
             </section>
 
-            <!-- Add Disqus Comments -->
-            {% if page.disqus %}
-                {% include disqus.html %}
+            {% if page.comments %}
+                <div data-width="100%" class="fb-comments" data-href="{{ site.url }}{{ page.url }}"></div>
             {% endif %}
 
         </footer>

@@ -11,6 +11,7 @@ description: "Lãng du đi vô định cánh trym trời"
 
 google_analytics: UA-51088846-5
 disqus: botbie-io-blog
+facebook_app_id: 1555729331387875
 
 # Permalinks
 permalink: /:year/:month/:day/:title
