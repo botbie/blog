@@ -7,6 +7,7 @@ date: 2016-07-31 10:18:00
 tags: [gpu, hashcat]
 subclass: 'post tag-test tag-content'
 author: nguquen
+disqus: true
 navigation: True
 ---
 

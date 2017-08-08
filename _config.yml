@@ -9,8 +9,8 @@ language: 'en-uk'
 name: 'Botbie Blog'
 description: "Lãng du đi vô định cánh trym trời"
 
-google_analytics: UA-69281367-1
-disqus: botbie
+google_analytics: UA-51088846-5
+disqus: botbie-io-blog
 
 # Permalinks
 permalink: /:year/:month/:day/:title
