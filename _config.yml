@@ -13,6 +13,7 @@ google_analytics: UA-51088846-5
 disqus: botbie-io-blog
 facebook_app_id: 1555729331387875
 
+url: http://blog.botbie.io
 # Permalinks
 permalink: /:year/:month/:day/:title
 
