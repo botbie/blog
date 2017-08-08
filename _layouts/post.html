@@ -94,7 +94,7 @@ class: 'post-template'
             </section>
 
             {% if page.comments %}
-                <div data-width="100%" class="fb-comments" data-href="{{ site.url }}{{ page.url }}"></div>
+                <div data-width="100%" class="fb-comments" data-href="{{ page.url | absolute_url }}"></div>
             {% endif %}
 
         </footer>
