@@ -3,7 +3,6 @@
 #highlighter: pygments
 markdown: kramdown
 highlighter: rouge
-paginate: 5
 language: 'en-uk'
 
 # Website info
@@ -36,7 +35,7 @@ exclude:
   - scripts
 
 # paginate
-paginate: 9
+paginate: 5
 paginate_path: '/page/:num/'
 paginate_tag_basepath: '/tag/:name/'
 paginate_tag_layout: 'tag.html'
