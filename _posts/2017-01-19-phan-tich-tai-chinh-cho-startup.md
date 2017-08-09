@@ -7,7 +7,6 @@ title: Phân tích tài chính cho Startup
 date: 2017-01-19
 tags: [startup]
 author: nkimkha
-comments: true
 ---
 
 Phần I - Câu Hỏi

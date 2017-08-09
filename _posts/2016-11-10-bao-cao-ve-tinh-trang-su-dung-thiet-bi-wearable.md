@@ -7,7 +7,6 @@ title: Báo cáo về tình trạng sử dụng thiết bị wearable
 date: 2016-11-10
 tags: [links]
 author: nkimkha
-comments: true
 ---
 
 Thống kê về tình trạng sử dụng thiết bị wearable cho thấy các điểm sau:

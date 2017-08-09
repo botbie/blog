@@ -7,7 +7,6 @@ title: Xin chào Swift
 date: 2016-07-08
 tags: [swift]
 author: nguquen
-comments: true
 ---
 
 Swift là ngôn ngữ lập trình được phát triển bởi Apple, release vào năm 2014, phiên bản mới nhất tại thời điểm viết bài này là 3.0 Preview 2. Apple đã tạo ra một điểm nhấn khi quyết định open source Swift vào ngày 3-12-2015, Swift hiện tại có thể develop và thực thi trên cả môi trường Linux lẫn Mac, mở ra cơ hội tiếp cận ngôn ngữ này cho những người dùng Linux. Swift đã không còn là một ngôn ngữ chỉ để thay thế objective-c khi phát triển ứng dụng cho Mac/iOS mà giờ đây chúng ta hoàn toàn có thể viết bất kì chương trình nào với nó, ví dụ như các ứng dụng Server-Side cho Linux. Hiện đã có một vài web framework cho Swift như [Kitura](https://github.com/IBM-Swift/Kitura) được phát triển bởi IBM, hay [Perfect](http://www.perfect.org/).

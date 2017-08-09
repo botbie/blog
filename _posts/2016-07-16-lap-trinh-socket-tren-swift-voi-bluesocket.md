@@ -7,7 +7,6 @@ title: Lập trình socket trên Swift với BlueSocket
 date: 2016-07-16
 tags: [swift]
 author: nguquen
-comments: true
 ---
 
 ### Giới thiệu
