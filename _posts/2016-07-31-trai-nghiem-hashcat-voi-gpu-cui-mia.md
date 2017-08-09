@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/covers/cover3.jpg'
+cover: 'assets/images/covers/cover4.jpg'
 logo: 'assets/images/ghost.png'
 title: Trải nghiệm hashcat với GPU cùi mía
 date: 2016-07-31 10:18:00
@@ -29,7 +29,7 @@ Nhưng từ phiên bản 3.0, hashcat đã gộp chung hai phiên bản này là
 $ wget http://hashcat.net/files/hashcat-3.00.7z
 $ 7zr x hashcat-3.00.7z
 ```
-Chạy chế độ benchmark[more]:
+Chạy chế độ benchmark:
 ```
 $ cd hashcat-3.00
 $ ./hashcat64.bin -b

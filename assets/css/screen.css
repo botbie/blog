@@ -188,7 +188,7 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,Avenir Next,Avenir,Segoe UI,Lucida Grande,Helvetica Neue,Helvetica,Fira Sans,Roboto,Noto,Droid Sans,Cantarell,Oxygen,Ubuntu,Franklin Gothic Medium,Century Gothic,Liberation Sans,serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
-    line-height: 1.75em;
+    line-height: 1.4;
     color: #3A4145;
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
@@ -353,9 +353,9 @@ pre {
     margin: 0 0 1.75em 0;
     border: #E3EDF3 1px solid;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     font-family: Inconsolata, monospace, sans-serif;
-    font-size: 0.9em;
+    font-size: 0.8em;
     white-space: pre;
     overflow: auto;
     background: #F7FAFB;
@@ -911,6 +911,10 @@ body.nav-opened .nav {
     animation: fade-in-down 0.9s;
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s;
+}
+
+.post-content {
+  padding-top: 3rem;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
