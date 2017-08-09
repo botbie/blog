@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-subclass: 'post tag-test tag-content'
 title: Bitcoin là gì
 date: 2016-06-26
 tags: [bitcoin]

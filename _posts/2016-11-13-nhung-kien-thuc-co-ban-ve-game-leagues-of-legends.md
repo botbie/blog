@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-subclass: 'post tag-test tag-content'
 title: Những kiến thức cơ bản về game Leagues of Legends
 date: 2016-11-13
 tags: [games]

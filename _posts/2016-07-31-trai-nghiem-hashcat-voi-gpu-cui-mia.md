@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover4.jpg'
-subclass: 'post tag-test tag-content'
 title: Trải nghiệm hashcat với GPU cùi mía
 date: 2016-07-31
 tags: [gpu, hashcat]
