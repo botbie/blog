@@ -10,6 +10,7 @@ tags: [games]
 author: nkimkha
 comments: true
 ---
+
 Game do công ty Riot phát hành, tại VN là Garena với tên **Liên minh huyền thoại**.
 
 Thông tin cơ bản
