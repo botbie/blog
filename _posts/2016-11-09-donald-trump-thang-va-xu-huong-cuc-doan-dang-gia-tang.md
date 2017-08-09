@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/figures/brexit.jpg'
-subclass: 'post tag-test tag-content'
 title: Donald Trump thắng và xu hướng cực đoan đang gia tăng
 date: 2016-11-09
 tags: [opinions]
