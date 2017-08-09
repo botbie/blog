@@ -7,11 +7,20 @@ nguquen:
   intro: >
     Ngủ để mà quên...
 
-casper:
-  username: casper
+jaken:
+  username: jaken
   avatar: /assets/images/avatars/casper.png
   cover: /assets/images/covers/casper.jpg
-  name: Casper Ghost
+  name: Toan Huynh
+  location: In the shell
+  intro: >
+    I'm a ghost...
+
+nkimkha:
+  username: nkimkha
+  avatar: /assets/images/avatars/casper.png
+  cover: /assets/images/covers/casper.jpg
+  name: Kim Kha
   location: In the shell
   intro: >
     I'm a ghost...
