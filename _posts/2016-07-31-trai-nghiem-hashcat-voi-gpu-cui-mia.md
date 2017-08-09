@@ -1,14 +1,11 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover4.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Trải nghiệm hashcat với GPU cùi mía
 date: 2016-07-31
 tags: [gpu, hashcat]
 author: nguquen
-comments: true
 ---
 
 Số là mình vừa kiếm được một con card đồ họa cũ, GeForce 210:

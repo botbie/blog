@@ -1,14 +1,11 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Báo cáo về tình trạng sử dụng thiết bị wearable
 date: 2016-11-10
 tags: [links]
 author: nkimkha
-comments: true
 ---
 
 Thống kê về tình trạng sử dụng thiết bị wearable cho thấy các điểm sau:

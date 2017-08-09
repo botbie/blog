@@ -1,14 +1,11 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Những kiến thức cơ bản về game Leagues of Legends
 date: 2016-11-13
 tags: [games]
 author: nkimkha
-comments: true
 ---
 
 Game do công ty Riot phát hành, tại VN là Garena với tên **Liên minh huyền thoại**.

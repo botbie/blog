@@ -1,14 +1,11 @@
 ---
 layout: post
 cover: 'assets/images/figures/brexit.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Donald Trump thắng và xu hướng cực đoan đang gia tăng
 date: 2016-11-09
 tags: [opinions]
 author: nkimkha
-comments: true
 ---
 
 Một cách thiển cận, khi quan sát các sự kiện gần đây, dường như xu hướng cực đoan đang thắng thế ở thế giới hiện đại.

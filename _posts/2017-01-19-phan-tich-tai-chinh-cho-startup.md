@@ -1,14 +1,11 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Phân tích tài chính cho Startup
 date: 2017-01-19
 tags: [startup]
 author: nkimkha
-comments: true
 ---
 
 Phần I - Câu Hỏi

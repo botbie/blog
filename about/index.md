@@ -1,8 +1,6 @@
 ---
 layout: page
 title: About
-navigation: True
-logo: '/assets/images/ghost.png'
 cover: '/assets/images/covers/cover7.jpg'
 current: about
 ---
