@@ -12,7 +12,7 @@ comments: true
 ---
 
 Phần I - Câu Hỏi
-=======
+--------
 
 Giả sử bạn mở một công ty thương mại, phân phối mặt hàng ngách - doanh thu, và lợi nhuận ròng trước thuế của 2 tháng kế tiếp như sau:
 
@@ -27,7 +27,7 @@ Bạn hãy thử suy ngẫm và trả lời câu hỏi trên trước khi đọc
 ![phan-tich-tai-chinh.jpg](/assets/images/figures/phan-tich-tai-chinh.jpg)
 
 Phần II - Các Khái Niệm
-=============
+-----------
 
 Kinh doanh nghĩa là ta phải chi ra (chi phí) và thu vào (doanh thu), có những cái Chi nó chạy theo cái Thu, ví dụ như chi phí vật liệu để làm ra sản phẩm. Bên cạnh đó, có những cái chi cố định theo kỳ cho dù có thu bao nhiêu đi nữa, ví dụ như tiền thuê mặt bằng. Tuy nhiên, cũng có những cái chi kiểu "lưỡng tính", ví dụ xe hơi công ty thuê ngoài một tháng nếu chạy dưới 2000 km thì chi tổng 20 triệu, nhưng khi vượt số 2000km thì sẽ tính phí theo từng cây số vượt. Ở đây, ta tạm bỏ qua những khoản thuộc về nhóm "lưỡng tính", vì nhóm này chiếm tỷ trọng ít, điều kiện xảy ra ngắn và không quá phổ biến.
 
@@ -39,7 +39,7 @@ Như vậy ta giả định trong phần chi phí luôn có hai phần sau:
 Có lẽ cũng nên thắc mắc là tại sao chúng ta phải hiểu rõ những khái niệm này? Định phí, biến phí, và CM là các khái niệm then chốt cần phải hiểu rõ trong mô hình phân tích điểm hoà vốn. Trước khi khởi nghiệp các bạn phải nhất thiết dự toán được ở mức doanh số nào công ty có thể hoà vốn, nghĩa là có lãi gộp đủ để trang trải cho chi phí cố định vốn chắc chắn sẽ xảy ngay khi bắt đầu kinh doanh. Bài tập này tuy không hỏi về điểm hoà vốn, nhưng sẽ giúp bạn hiểu vấn đề một cách sâu sắc hơn thế.
 
 Phần III - Lời Giải
-============
+----------
 
 **Phương pháp 1**: Đa phần chúng ta sẽ có xu hướng giải bài toán tài chính này theo cách lập hệ phương trình 2 ẩn, gọi M là % lãi gộp ta có hệ phương trình sau:
 
