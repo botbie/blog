@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
 navigation: True
 title: Bản đồ những nơi có bán xăng E5

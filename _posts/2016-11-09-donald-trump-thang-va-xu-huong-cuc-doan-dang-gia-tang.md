@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/figures/brexit.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
 navigation: True
 title: Donald Trump thắng và xu hướng cực đoan đang gia tăng

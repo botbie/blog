@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover4.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
 navigation: True
 title: Trải nghiệm hashcat với GPU cùi mía

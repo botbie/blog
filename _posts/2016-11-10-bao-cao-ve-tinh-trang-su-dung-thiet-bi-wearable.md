@@ -1,7 +1,6 @@
 ---
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
-logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
 navigation: True
 title: Báo cáo về tình trạng sử dụng thiết bị wearable
