@@ -4,7 +4,7 @@ cover: 'assets/images/figures/brexit.jpg'
 logo: 'assets/images/ghost.png'
 subclass: 'post tag-test tag-content'
 navigation: True
-title: Bản đồ những nơi có bán xăng E5
+title: Donald Trump thắng và xu hướng cực đoan đang gia tăng
 date: 2016-11-09
 tags: [opinions]
 author: nkimkha
