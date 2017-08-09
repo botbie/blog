@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Author
-cover: '/assets/images/covers/cover4.jpg'
 class: 'author-template'
 label: Author
 current: author
@@ -13,7 +12,8 @@ current: author
 
 <!-- Everything inside the #author tags pulls data from the author -->
 <!-- #author  -->
-    <header class="main-header author-head {% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}) {% else %}no-cover{% endif %}">
+{% assign author = site.data.authors[page.author] %}
+    <header class="main-header author-head {% if author.cover %}" style="background-image: url({{ author.cover | relative_url }}) {% else %}no-cover{% endif %}">
         <nav class="main-nav overlay clearfix">
           {% if site.logo %}<a class="blog-logo" href="{{ "/" | relative_url }}"><img src="{{ site.logo | relative_url }}" alt="Blog Logo" /></a>{% endif %}
             {% if site.navigation %}
@@ -23,7 +23,6 @@ current: author
     </header>
 
     <section class="author-profile inner">
-        {% assign author = site.data.authors[page.author] %}
         {% if author.avatar %}
         <figure class="author-image">
             <div class="img" style="background-image: url({{ author.avatar | relative_url }})"><span class="hidden">{{ author.name }}'s Picture</span></div>
