@@ -2,7 +2,6 @@
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Bản đồ những nơi có bán xăng E5
 date: 2016-11-10
 tags: [links]

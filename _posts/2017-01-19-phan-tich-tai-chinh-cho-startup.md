@@ -2,7 +2,6 @@
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Phân tích tài chính cho Startup
 date: 2017-01-19
 tags: [startup]

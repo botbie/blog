@@ -16,6 +16,7 @@ facebook_app_id: 1555729331387875
 url: http://blog.botbie.io
 logo: /assets/images/ghost.png
 comments: true
+navigation: true
 
 # Permalinks
 permalink: /:year/:month/:day/:title

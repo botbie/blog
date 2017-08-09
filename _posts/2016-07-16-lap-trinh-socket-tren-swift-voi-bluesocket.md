@@ -2,7 +2,6 @@
 layout: post
 cover: 'assets/images/covers/cover4.jpg'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Lập trình socket trên Swift với BlueSocket
 date: 2016-07-16
 tags: [swift]

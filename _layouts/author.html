@@ -3,7 +3,6 @@ layout: default
 title: Author
 cover: '/assets/images/covers/cover4.jpg'
 class: 'author-template'
-navigation: True
 label: Author
 current: author
 ---
@@ -17,7 +16,7 @@ current: author
     <header class="main-header author-head {% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}) {% else %}no-cover{% endif %}">
         <nav class="main-nav overlay clearfix">
           {% if site.logo %}<a class="blog-logo" href="{{ "/" | relative_url }}"><img src="{{ site.logo | relative_url }}" alt="Blog Logo" /></a>{% endif %}
-            {% if page.navigation %}
+            {% if site.navigation %}
                 <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
             {% endif %}
         </nav>

@@ -2,7 +2,6 @@
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Báo cáo về tình trạng sử dụng thiết bị wearable
 date: 2016-11-10
 tags: [links]

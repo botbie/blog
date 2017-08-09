@@ -2,7 +2,6 @@
 layout: post
 cover: 'assets/images/covers/cover4.jpg'
 subclass: 'post tag-test tag-content'
-navigation: True
 title: Xin chào Swift
 date: 2016-07-08
 tags: [swift]
