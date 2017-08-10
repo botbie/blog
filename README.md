@@ -1,4 +1,4 @@
-This is a open source blog platform that's based on Jekyll and host by Github. Everyone are free to join with us to contribute your articles.
+This is an open source blog platform that is based on Jekyll and hosted by Github. Everyone are free to join us to contribute your articles.
 
 To run this blog on your machine, just follow these steps:
 
@@ -15,7 +15,9 @@ $ gem install bundler
 ```
 $ bundle install
 ```
-4. Run the dev server:
+4. Run the local server:
 ```
 bundle exec jekyll serve
 ```
+5. Access local server at: `http://localhost:4000/`
+
