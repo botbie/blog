@@ -68,14 +68,15 @@ prose:
       - name: "author"
         field:
           element: "text"
-          label: "author"
+          label: "Author"
       - name: "description"
         field:
           element: "textarea"
-          label: "description"
+          label: "Description"
       - name: "date"
         field:
           element: "text"
+          label: "Datetime"
           value: CURRENT_DATETIME
       - name: "tags"
         field:
