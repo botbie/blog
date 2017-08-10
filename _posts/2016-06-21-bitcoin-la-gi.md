@@ -5,6 +5,8 @@ title: Bitcoin là gì
 date: 2016-06-26
 tags: [bitcoin]
 author: jaken
+description: >
+  Bitcoin là đồng tiền số quản lý phi tập trung do Satoshi Nakamoto sáng tạo. Nó không tín nhiệm một máy chủ trung tâm làm nhiệm vụ xử lý giao dịch hay lưu trữ tiền tệ mà sử dụng một mạng ngang hàng: Bitcoin cấp quyền cho các nút mạng khác nhau kiểm chứng giao dịch thông qua sức mạnh của máy tính, các giao dịch cũng như phát hành tiền được thực hiện theo sự đồng thuận trong phần mềm. Có tối đa  2,099,999,997,690,000 đơn vị Bitcoin (được gọi là satoshi) có thể được phát hành, hiện tại 1 Bitcoin = 100,000,000 satoshi. Nói cách khác, số lượng Bitcoin tối đa sẽ xuất hiện trên thế giới là 21 triệu, ước tính năm 2140 toàn bộ số bitcoin này sẽ được phát hành hết.
 ---
 
 Bitcoin là đồng tiền số quản lý phi tập trung do Satoshi Nakamoto sáng tạo. Nó không tín nhiệm một máy chủ trung tâm làm nhiệm vụ xử lý giao dịch hay lưu trữ tiền tệ mà sử dụng một mạng ngang hàng: Bitcoin cấp quyền cho các nút mạng khác nhau kiểm chứng giao dịch thông qua sức mạnh của máy tính, các giao dịch cũng như phát hành tiền được thực hiện theo sự đồng thuận trong phần mềm. Có tối đa  2,099,999,997,690,000 đơn vị Bitcoin (được gọi là satoshi) có thể được phát hành, hiện tại 1 Bitcoin = 100,000,000 satoshi. Nói cách khác, số lượng Bitcoin tối đa sẽ xuất hiện trên thế giới là 21 triệu, ước tính năm 2140 toàn bộ số bitcoin này sẽ được phát hành hết.

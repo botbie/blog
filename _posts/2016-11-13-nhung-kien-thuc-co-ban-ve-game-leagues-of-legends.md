@@ -5,6 +5,8 @@ title: Những kiến thức cơ bản về game Leagues of Legends
 date: 2016-11-13
 tags: [games]
 author: nkimkha
+description: >
+  Game do công ty Riot phát hành, tại VN là Garena với tên Liên minh huyền thoại...
 ---
 
 Game do công ty Riot phát hành, tại VN là Garena với tên **Liên minh huyền thoại**.

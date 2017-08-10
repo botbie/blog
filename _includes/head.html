@@ -1,30 +1,40 @@
-    <link rel="canonical" href="{{ site.baseurl }}/" />
-    <meta name="referrer" content="origin" />
-    <link rel="next" href="{{ site.baseurl }}/page/2/" />
+{% if page.class == 'author-template' %}
+{% assign author = site.data.authors[page.author] %}
+{% assign title = author.name %}
+{% assign cover = author.cover %}
+{% assign description = author.intro | strip_newlines %}
+{% else %}
+{% assign title = page.title | default: site.name %}
+{% assign description = page.description | default: site.description | strip_newlines %}
+{% assign cover = page.cover | site.cover %}
+{% endif %}
+<link rel="canonical" href="{{ site.baseurl }}/" />
+<meta name="referrer" content="origin" />
+<link rel="next" href="{{ site.baseurl }}/page/2/" />
 
-    <meta property="og:site_name" content="{{ site.name }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ site.name }}" />
-    <meta property="og:description" content="{{ site.description }}" />
-    <meta property="og:url" content="{{ site.baseurl }}/" />
-    <meta property="og:image" content="{{ site.baseurl }}/assets/images/covers/cover1.jpg" />
+<meta property="og:site_name" content="{{ site.name }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ description }}" />
+<meta property="og:url" content="{{ page.url | site.baseurl | absolute_url }}" />
+<meta property="og:image" content="{{ cover | absolute_url }}" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{ site.name }}" />
-    <meta name="twitter:description" content="{{ site.description }}" />
-    <meta name="twitter:url" content="{{ site.baseurl }}/" />
-    <meta name="twitter:image:src" content="{{ site.baseurl }}/assets/images/covers/cover1.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{{ title }}" />
+<meta name="twitter:description" content="{{ description }}" />
+<meta name="twitter:url" content="{{ page.url | site.baseurl | absolute_url }}" />
+<meta name="twitter:image:src" content="{{ cover | absolute_url }}" />
 
-    <script type="application/ld+json">
+<script type="application/ld+json">
 {
     "@context": "http://schema.org",
     "@type": "Website",
-    "publisher": "Finding The Way Home",
-    "url": "{{ site.baseurl }}/",
-    "image": "{{ site.baseurl }}/assets/images/covers/cover1.jpg",
-    "description": "{{ site.description }}"
+    "publisher": "{{ site.name }}",
+    "url": "{{ page.url | site.baseurl | absolute_url }}",
+    "image": "{{ cover | absolute_url }}",
+    "description": "{{ description }}"
 }
-    </script>
+</script>
 
-    <meta name="generator" content="Jekyll 3.0.0" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+<meta name="generator" content="Jekyll 3.0.0" />
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
