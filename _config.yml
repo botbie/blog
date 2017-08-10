@@ -60,29 +60,30 @@ prose:
     - /_layouts
     - /_includes
   metadata:
-    - name: "layout"
-      field:
-        element: "hidden"
-        value: "post"
-    - name: "title"
-      field:
-        element: "text"
-        label: "title"
-    - name: "author"
-      field:
-        element: "text"
-        label: "author"
-    - name: "description"
-      field:
-        element: "textarea"
-        label: "description"
-    - name: "date"
-      field:
-        element: "text"
-        value: CURRENT_DATETIME
-    - name: "tags"
-      field:
-        element: "multiselect"
-        label: "Add Tags"
-        placeholder: "Choose Tags"
-        alterable: true
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "author"
+        field:
+          element: "text"
+          label: "author"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "description"
+      - name: "date"
+        field:
+          element: "text"
+          value: CURRENT_DATETIME
+      - name: "tags"
+        field:
+          element: "multiselect"
+          label: "Add Tags"
+          placeholder: "Choose Tags"
+          alterable: true
