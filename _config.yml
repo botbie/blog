@@ -48,3 +48,33 @@ paginate_tag_basepath: '/tag/:name/'
 paginate_tag_layout: 'tag.html'
 paginate_author_basepath: '/author/:name/'
 paginate_author_layout: 'author.html'
+
+# Prose.io - Editor for posts
+prose:
+  rooturl: '_posts'
+  media: 'assets/media'
+  ignore:
+    - index.html
+    - 404.html
+    - _config.yml
+    - /_layouts
+    - /_includes
+  metadata:
+    - name: "layout"
+      field:
+        element: "hidden"
+        value: "post"
+    - name: "title"
+      field:
+        element: "text"
+        label: "title"
+    - name: "date"
+      field:
+        element: "text"
+        value: CURRENT_DATETIME
+    - name: "tags"
+      field:
+        element: "multiselect"
+        label: "Add Tags"
+        placeholder: "Choose Tags"
+        alterable: true
