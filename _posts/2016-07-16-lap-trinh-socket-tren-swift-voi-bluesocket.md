@@ -5,6 +5,8 @@ title: Lập trình socket trên Swift với BlueSocket
 date: 2016-07-16
 tags: [swift]
 author: nguquen
+description: >
+  Để lập trình socket trên Swift chúng ta có thể dùng các hàm quen thuộc như socket, bind, listen, connect.v.v.v. thông qua thư viện của hệ thống như Glibc (Linux) / Darwin (MacOS). Nhưng như vậy thì khá là tay chân, hiện tại có nhiều thư viện Swift đã bọc các hàm của hệ thống này trong những class của Swift, việc của chúng ta chỉ là import và sử dụng các class của Swift này thôi.
 ---
 
 ### Giới thiệu

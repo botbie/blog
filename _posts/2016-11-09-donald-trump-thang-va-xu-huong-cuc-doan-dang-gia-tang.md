@@ -5,6 +5,8 @@ title: Donald Trump thắng và xu hướng cực đoan đang gia tăng
 date: 2016-11-09
 tags: [opinions]
 author: nkimkha
+description: >
+  Mới hôm nay, 8/11 (tức 9/11 giờ VN), Donald Trump thuộc Đảng Cộng Hoà thắng cử trong cuộc cạnh tranh giành chức Tổng Thống Mỹ. Ông ta là ai? Một doanh nhân. Nhưng quan trọng hơn, những gì ông ta nói và hứa khi tranh cử...
 ---
 
 Một cách thiển cận, khi quan sát các sự kiện gần đây, dường như xu hướng cực đoan đang thắng thế ở thế giới hiện đại.

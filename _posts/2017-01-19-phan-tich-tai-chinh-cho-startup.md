@@ -5,6 +5,8 @@ title: Phân tích tài chính cho Startup
 date: 2017-01-19
 tags: [startup]
 author: nkimkha
+description: >
+  Kinh doanh nghĩa là ta phải chi ra (chi phí) và thu vào (doanh thu), có những cái Chi nó chạy theo cái Thu, ví dụ như chi phí vật liệu để làm ra sản phẩm. Bên cạnh đó, có những cái chi cố định theo kỳ cho dù có thu bao nhiêu đi nữa, ví dụ như tiền thuê mặt bằng. Tuy nhiên, cũng có những cái chi kiểu "lưỡng tính", ví dụ xe hơi công ty thuê ngoài một tháng nếu chạy dưới 2000 km thì chi tổng 20 triệu, nhưng khi vượt số 2000km thì sẽ tính phí theo từng cây số vượt. Ở đây, ta tạm bỏ qua những khoản thuộc về nhóm "lưỡng tính", vì nhóm này chiếm tỷ trọng ít, điều kiện xảy ra ngắn và không quá phổ biến.
 ---
 
 Phần I - Câu Hỏi

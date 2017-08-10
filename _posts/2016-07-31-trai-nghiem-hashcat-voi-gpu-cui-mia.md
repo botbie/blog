@@ -5,6 +5,8 @@ title: Trải nghiệm hashcat với GPU cùi mía
 date: 2016-07-31
 tags: [gpu, hashcat]
 author: nguquen
+description: >
+  Với những card đồ họa hiện nay số lượng core đã lên tới cả ngàn thì specs này khá là khiêm tốn tương xứng với một món đồ cũ kỹ và giá rẻ ^^, 16 CUDA core chỉ bằng 8 * 2 = 2 MCU,  con CPU i7 của mình cũng đã = 8MCU rồi. Nhưng cũng không sao cả, với mục đích "trải nghiệm" thì như thế là đủ.
 ---
 
 Số là mình vừa kiếm được một con card đồ họa cũ, GeForce 210:
