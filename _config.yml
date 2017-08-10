@@ -55,10 +55,6 @@ prose:
   media: 'assets/media'
   ignore:
     - index.html
-    - 404.html
-    - _config.yml
-    - /_layouts
-    - /_includes
   metadata:
     _posts:
       - name: "layout"
