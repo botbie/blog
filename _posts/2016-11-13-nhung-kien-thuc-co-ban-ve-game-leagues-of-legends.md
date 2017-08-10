@@ -23,7 +23,7 @@ Vấn đề là các người chơi đối phương không để yên cho mình 
 
 Bản đồ
 ------
-![LOL maps](/assets/images/figures/league-of-legends-map.jpg)
+![LOL maps](/assets/media/league-of-legends-map.jpg)
 
 Một team sẽ ở góc dưới bên trái, team còn lại ở góc trên bên phải.
 

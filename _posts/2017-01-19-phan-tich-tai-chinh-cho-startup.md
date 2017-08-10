@@ -22,7 +22,7 @@ Vậy chi phí cố định hàng tháng là bao nhiêu? Biên lãi gộp sau kh
 **Giả định**: chi phí cố định và CM (contribution margin) là không đổi giữa hai tháng.
 Bạn hãy thử suy ngẫm và trả lời câu hỏi trên trước khi đọc phần giải đáp phía dưới.
 
-![phan-tich-tai-chinh.jpg](/assets/images/figures/phan-tich-tai-chinh.jpg)
+![phan-tich-tai-chinh.jpg](/assets/media/phan-tich-tai-chinh.jpg)
 
 Phần II - Các Khái Niệm
 -----------
