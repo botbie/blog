@@ -6,6 +6,7 @@
     <ul>
         <li class="nav-home {% if page.current == 'home' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/">Home</a></li>
         <li class="nav-about {% if page.current == 'about' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/about">About</a></li>
+        <li class="nav-author {% if page.current == 'author' %} nav-current{% endif %}" role="presentation"><a href="{{ site.baseurl }}/author">Contributors</a></li>
         {% for tag in site.tags %}
         {% assign tagSlug = tag[0] | slugify %}
         {% assign tagName = tag[0] | capitalize %}
