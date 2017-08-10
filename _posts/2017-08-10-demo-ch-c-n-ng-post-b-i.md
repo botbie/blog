@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2017-08-10 23:13 +0800'
-published: false
+published: true
 title: Demo chức năng post bài
 author: nkimkha
 description: Demo post bài. Đoạn description có thể có nhiều hàng.
