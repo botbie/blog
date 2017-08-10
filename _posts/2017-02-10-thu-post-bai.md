@@ -1,0 +1,11 @@
+---
+layout: post
+date: '2017-02-10 23:29 +0800'
+published: true
+title: Thử post bài
+author: nkimkha
+description: Test bài mới.
+---
+## A New Post
+
+Enter text in [Markdown](http://daringfireball.net/projects/markdown/). Use the toolbar above, or click the **?** button for formatting help.
