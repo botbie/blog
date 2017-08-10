@@ -1296,6 +1296,12 @@ body:not(.post-template) .post-title {
     box-shadow: none;
 }
 
+.author-list.author-image {
+  position: static;
+  display: inline-block;
+  margin: auto;
+}
+
 .author-title {
     margin: 1.5rem 0 1rem;
 }

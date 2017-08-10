@@ -7,15 +7,6 @@ nguquen:
   intro: >
     Ngủ để mà quên...
 
-jaken:
-  username: jaken
-  avatar: /assets/images/avatars/casper.png
-  cover: /assets/images/covers/casper.jpg
-  name: Toan Huynh
-  location: In the shell
-  intro: >
-    I'm a ghost...
-
 nkimkha:
   username: nkimkha
   avatar: /assets/images/avatars/nkimkha.jpg
@@ -24,4 +15,13 @@ nkimkha:
   location: HCMC, Vietnam
   intro: >
     ENTP Type.
+
+jaken:
+  username: jaken
+  avatar: /assets/images/avatars/casper.png
+  cover: /assets/images/covers/casper.jpg
+  name: Toan Huynh
+  location: In the shell
+  intro: >
+    I'm a ghost...
 

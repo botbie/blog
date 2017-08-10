@@ -1,0 +1,19 @@
+---
+layout: page
+title: Contributors
+cover: '/assets/images/covers/cover7.jpg'
+current: author
+---
+
+{% for key in site.data.authors %}
+{% assign author = key[1] %}
+<figure
+  title="{{ author.name }}"
+  class="author-list author-image">
+  <a class="img"
+     href="{{ site.baseurl }}/author/{{ author.username }}"
+     style="background-image: url({{ author.avatar | relative_url }})">
+    <span class="hidden">{{ author.username }}'s Picture</span>
+  </a>
+</figure>
+{% endfor %}
