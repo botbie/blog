@@ -5,7 +5,7 @@ cover: '/assets/images/covers/cover7.jpg'
 current: about
 ---
 
-This is an open source blog platform that based on Jekyll and hosted by Github. Everyone are free to join us to contribute your articles.
+This is an open source blog platform that is based on Jekyll and hosted by Github. Everyone are free to join us to contribute your articles.
 
 To run this blog on your machine, just follow these steps:
 
