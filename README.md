@@ -1,7 +1,7 @@
 Botbie Blog ![BuildStatus](https://circleci.com/gh/botbie/blog.svg?style=svg)
 ===========
 
-This is an open source blog platform that is based on Jekyll and hosted by Github. Everyone are free to join us to contribute your articles.
+This is an open source blogging platform that is based on Jekyll and hosted by Github. Everyone is free to join us to contribute your articles.
 
 To run this blog on your machine, just follow these steps:
 
@@ -27,7 +27,7 @@ bundle exec jekyll serve
 ## How to become a contributor?
 Like normal open source project on Github, you should fork `https://github.com/botbie/blog`, make changes and create a Pull Request.
 
-If you are a new contributor, you must register your profile by adding an entry in `_data/authors.yml`, example:
+If you are a new contributor, you must register your profile by adding an entry in `_data/authors.yml`, for example:
 ```
 just_another_cool_contributor:
   username: just_another_cool_contributor
@@ -39,7 +39,7 @@ just_another_cool_contributor:
     I'm a ghost...
 ```
 
-To add a new article, create a file in `_posts` with file name follow this format: `<year>-<month>-<day>-slug-of-the-article.md`
+To add a new article, create a file in `_posts` with filename follow this format: `<year>-<month>-<day>-slug-of-the-article.md`
 
 Article is just a markdown file with some information in Front Matter to describe your post, example:
 ```
@@ -56,4 +56,3 @@ description: >
 
 Your main content here.
 ```
-
