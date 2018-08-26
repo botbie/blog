@@ -946,7 +946,7 @@ body.nav-opened .nav {
 /*}*/
 
 body:not(.post-template) .post-title {
-    font-size: 3.6rem;
+    font-size: 3rem;
 }
 
 .post-title a {
