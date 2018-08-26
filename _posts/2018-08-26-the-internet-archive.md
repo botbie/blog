@@ -6,7 +6,7 @@ date: 2018-08-26
 tags: [internet,npo]
 author: jaken
 description: >
-  [The Internet Archive](https://archive.org/) là một kho lưu trữ khổng lồ phi lợi nhuận được tạo ra để lưu trữ dữ liệu trên internet: văn bản, hình ảnh, âm thanh, phần mềm. Họ tự đặt ra cho mình sứ mệnh càn quét intenet định kỳ và lưu lại tất cả những dữ liệu thu được. Có lẽ bạn sẽ thấy họ kỳ quặc vì internet không chỉ có vàng, mà còn đầy rác. Nhưng nếu bạn ở tình huống của tôi hôm nay, bạn sẽ thấy nó tuyệt vời và những con người đã tạo ra The Internet Archive mới đáng yêu làm sao.
+  The Internet Archive là một kho lưu trữ khổng lồ phi lợi nhuận được tạo ra để lưu trữ dữ liệu trên internet: văn bản, hình ảnh, âm thanh, phần mềm. Họ tự đặt ra cho mình sứ mệnh càn quét intenet định kỳ và lưu lại tất cả những dữ liệu thu được. Có lẽ bạn sẽ thấy họ kỳ quặc vì internet không chỉ có vàng, mà còn đầy rác. Nhưng nếu bạn ở tình huống của tôi hôm nay, bạn sẽ thấy nó tuyệt vời và những con người đã tạo ra The Internet Archive mới đáng yêu làm sao.
 ---
 
 [The Internet Archive](https://archive.org/) là một kho lưu trữ khổng lồ phi lợi nhuận được tạo ra để lưu trữ dữ liệu trên internet: văn bản, hình ảnh, âm thanh, phần mềm. Họ tự đặt ra cho mình sứ mệnh càn quét intenet định kỳ và lưu lại tất cả những dữ liệu thu được. Có lẽ bạn sẽ thấy họ kỳ quặc vì internet không chỉ có vàng, mà còn đầy rác. Nhưng nếu bạn ở tình huống của tôi hôm nay, bạn sẽ thấy đó là một ý tưởng tuyệt vời và những con người đã tạo ra nó mới đáng yêu làm sao.
