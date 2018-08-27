@@ -12,7 +12,7 @@ description: >
 Mình chia sẻ bài viết này cho các bạn muốn sở hữu một VPS giá rẻ cho riêng mình. Mục đích thì vô vàn: có người cần nơi để host một trang blog, website cá nhân, có người muốn nâng cao kĩ năng system (như mình) có người đơn giản muốn có 1 proxy cá nhân để vượt qua các vụ chặn facebook chẳng hạn ...
 
 ## Bước 1: Mua VPS ở Vultr
----
+
 Bạn có thể chọn riêng cho mình 1 nhà cung cấp mà các bạn thích và thuận tiện. Riêng mình, lý do mình chọn Vultr thì đơn giản là được recommend từ một anh bạn, với các lý do đơn giản là host khá ổn định, server ở Nhật, tốc độ down về khá tốt, cộng với gói 5$ cho người mới bắt đầu là ok, à còn chấp nhận thẻ debit nữa :D
 
 ### Đăng kí tài khoản
@@ -34,7 +34,7 @@ Mình chọn gói cơ bản nhất như sau:
 => Deploy Now
 
 ## Bước 2: Thiết lập cơ bản cho server
----
+
 Phần này phụ thuộc vào phần trước các bạn chọn OS gì nhá, mình chon CentOS 7, các bạn chọn OS khác sẽ phải thay đổi các command line đôi chút.
 
 Trước tiên các bạn phải đăng nhập được vào server thông qua ssh tool.
