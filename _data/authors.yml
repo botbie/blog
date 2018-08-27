@@ -34,3 +34,11 @@ phapli:
   intro: >
     I'm a ghost...
 
+xluffy:
+  username: xluffy
+  avatar: /assets/images/avatars/xluffy.jpeg
+  cover: /assets/images/covers/casper.jpg
+  name: xluffy
+  location: In the shell
+  intro: >
+    I'm a ghost...
