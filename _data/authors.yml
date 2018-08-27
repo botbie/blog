@@ -20,7 +20,16 @@ jaken:
   username: jaken
   avatar: /assets/images/avatars/jaken.jpeg
   cover: /assets/images/covers/cover6.jpg
-  name: Toan Huynh
+  name: Jaken Ty
+  location: In the shell
+  intro: >
+    I'm a ghost...
+
+phapli:
+  username: phapli
+  avatar: /assets/images/avatars/phapli.jpeg
+  cover: /assets/images/covers/casper.jpg
+  name: phapli
   location: In the shell
   intro: >
     I'm a ghost...
