@@ -11,5 +11,6 @@ description: >
 
 Giới thiệu bitcoin cơ bản
 
-### [Bitcoin là gì](../../../2016/06/26/bitcoin-la-gi)
-### [Block hashing algorithm](../../../2016/06/18/bitcoin-block-hashing-algorithm)
+* [Bitcoin là gì](../../../2016/06/26/bitcoin-la-gi)
+* [Block hashing algorithm](../../../2016/06/18/bitcoin-block-hashing-algorithm)
+* [Bitcoin genesis block](../../../2016/06/16/bitcoin-genesis-block)
