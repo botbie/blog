@@ -2,7 +2,7 @@
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
 title: Block hashing algorithm - thuật toán băm khối
-date: 2016-06-27
+date: 2016-06-18
 tags: [bitcoin,cryptography,cryptocurrency,hash,bài dịch]
 author: jaken
 description: >

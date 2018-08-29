@@ -2,7 +2,7 @@
 layout: post
 cover: 'assets/images/covers/cover2.jpg'
 title: Phục hồi code với git
-date: 2018-08-27
+date: 2016-06-17
 tags: [source control, git, devops]
 author: xluffy
 description: >

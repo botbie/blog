@@ -12,4 +12,4 @@ description: >
 Giới thiệu bitcoin cơ bản
 
 ### [Bitcoin là gì](../../../2016/06/26/bitcoin-la-gi)
-### [Block hashing algorithm](../../../2016/06/27/bitcoin-block-hashing-algorithm)
+### [Block hashing algorithm](../../../2016/06/18/bitcoin-block-hashing-algorithm)
