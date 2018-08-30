@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/covers/cover2.jpg'
+cover: "assets/images/covers/cover2.jpg"
 title: BINARY ANALYSIS - NEXT CHAPTER OF THE GAME
 date: 2014-07-01
 tags: [security, ctf]
@@ -19,27 +19,30 @@ Trò chơi phân tích mã bắt đầu từ những ngày đầu ngành điện
 
 Việc đọc mã thuần với các disassembler là chưa đủ, người ta muốn theo dõi chương trình đó chạy ra sao, làm cái gì. Vậy là các trình debugger ra đời để đáp ứng nhu cầu đó. Các debugger thật tuyệt vời, nó làm đơn giản hóa việc hiểu 1 đoạn mã làm cái gì thay vì chỉ ngồi tưởng tượng. Các tool debugger tiêu biểu: **Ollydbg**, **gdb**, **Windbg** …
 
-Nhưng việc ngồi mòn mông để ngồi dò từng dòng lệnh asm của 1 chương trình, nhất là với các chương trình lớn và mã rối rắm thì là cả một thảm họa. Phải có gì đó giúp tự động hóa, giúp cuộc  đời này tươi đẹp hơn, giúp người lười có nhiều thời gian để ăn ngủ hơn thay vì phải ngồi debug cả buổi.
+Nhưng việc ngồi mòn mông để ngồi dò từng dòng lệnh asm của 1 chương trình, nhất là với các chương trình lớn và mã rối rắm thì là cả một thảm họa. Phải có gì đó giúp tự động hóa, giúp cuộc đời này tươi đẹp hơn, giúp người lười có nhiều thời gian để ăn ngủ hơn thay vì phải ngồi debug cả buổi.
 
 Người ta chia việc phân tích mã thực thi (**binary analysis**) thành 2 mảng khác nhau như sau:
 
-- **Phân tích tĩnh (Static code analysis)**: Ngồi nhìn một đoạn code đứng im ru, bạn cố tìm hiểu, khi làm việc nó sẽ làm cái gì, việc này khá giống với việc bạn nói chuyện với một cục đá -_-
+- **Phân tích tĩnh (Static code analysis)**: Ngồi nhìn một đoạn code đứng im ru, bạn cố tìm hiểu, khi làm việc nó sẽ làm cái gì, việc này khá giống với việc bạn nói chuyện với một cục đá -\_-
 - **Phân tích động (Dynamic program analysis)**: Thay vì chỉ ngồi nhìn ngắm dung nhan đoạn code, bạn có thể xem quá trình đoạn code đó làm việc, xem nó buồn vui thế nào, hiếu động ra sao… một nhánh của phương pháp này là phân tích hành vi
 
 Tất nhiên mỗi phương pháp đều có thế mạnh, yếu riêng :
 
 **Phân tích tĩnh**:
+
 - Đảm bảo phân tích trọn vẹn code, do suy cho cùng thì mọi hành vi của chương trình đều nằm cả trên 1 cục binary đó mà thôi, tất nhiên điều này là rất khó
 - Tốc độ nhanh
 - Nhưng phương pháp này sẽ phải rất mệt với đám làm rối code (obfuscation), pack … thậm chí theo quan điểm cá nhân của người viết thì với 1 bộ làm rối đủ tốt thì phân tích tĩnh là bất lực.
 
 **Phân tích động**
+
 - Sẽ thấy được những điều mà phương pháp tĩnh không cho thấy được, như tụi pack chẳng hạn
 - Tuy nhiên do giả lập lại quá trình thực thi nên bị gặp vấp phải các vấn đề như không khó có thể thực thi đến mọi ngóc ngách của chương trình, các trick để loop vô cùng, các trick nhận dạng bị debug …
 - Tốc độ chậm hơn phân tích tĩnh
 
 Trong quá khứ, việc phân tích mã tĩnh chiếm ưu thế, nhưng càng gần đây việc phân tích mã động ngày càng phát triển do:
-- Máy tính ngày càng mạnh, công nghệ ảo hóa ngày càng tốt, đảm bảo tốc  độ cho việc này
+
+- Máy tính ngày càng mạnh, công nghệ ảo hóa ngày càng tốt, đảm bảo tốc độ cho việc này
 - Tụi binary sau này ngày càng đông và hung hãn, chưa kể nhiều đứa còn rất khó hiểu nếu chỉ nhìn mặt chúng nó (phân tích tĩnh), thôi thì cứ thả cho nó chạy xem nó làm gì cho trực quan
 
 Bài viết này, người viết sẽ nói về việc tự động hóa trong việc phân tích mã động. Bước đầu làm quen với vấn đề này.
@@ -92,7 +95,7 @@ Không quá khó để nhận ra sự khác biệt của ký tự **i**. Thao t�
 
 **b. Break game**
 
-Trong thực tế áp dụng, đã áp dụng phương pháp này để giải quyết bài SimpleVM ( http://reversing.kr/challenge.php ), một script nhỏ và phân tích các thông số thủ công trong vòng nửa giờ cho ra key: id3*nxx (phần xx dấu đi để bạn tự thực nghiệm)
+Trong thực tế áp dụng, đã áp dụng phương pháp này để giải quyết bài SimpleVM ( http://reversing.kr/challenge.php ), một script nhỏ và phân tích các thông số thủ công trong vòng nửa giờ cho ra key: id3\*nxx (phần xx dấu đi để bạn tự thực nghiệm)
 
 Submit và kết quả chính xác.
 
@@ -187,7 +190,7 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-Compile  tại: ./hook/hit
+Compile tại: ./hook/hit
 
 Command thực thi:
 `./pin/pin -injection child -t runner.so -s tools/strings.lua -- ./hook/hit test >out.log`
@@ -214,12 +217,13 @@ Có một trong đó chứa vài dòng như sau:
 
 **b. Break game**
 
-Chúng ta sẽ cùng ngâm cứu lại một bài viết cũ: http://blog.botbie.com/2012/12/31/29c3-ctf-misc-300-funchive/ , bằng hướng tiếp cận mới này.
+Chúng ta sẽ cùng ngâm cứu lại một bài viết cũ: [https://blog.botbie.io/2012/12/31/29c3-ctf-misc-300-funchive](/2012/12/31/29c3-ctf-misc-300-funchive) , bằng hướng tiếp cận mới này.
 
 Một command nhỏ:
 `./pin/pin -injection child -t runner.so -s tools/strings.lua -- rar p funchive.rar >out.log`
 
 Và chúng ta cùng xem log và có những dòng sau:
+
 ```
 -- at 413d86 used 29C3_rarvm_is_awel
 -- at 413d8b used 29C3_rarvm_is_awela
