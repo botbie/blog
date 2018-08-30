@@ -23,4 +23,4 @@ Phương pháp miner có thể điều khiển blockhash như sau: Miner đào b
 
 Xác suất Miner có được blockhash sinh ra bộ jackpot mình đang nắm trong một lần mine là 1/49 ^ 6. Bằng với xác xuất người mua một vé số có được.
 
-Kết luận: Phương pháp sử dụng blockhash để làm nguồn ngẫu nhiên cho trò jackpot hoặc bất kỳ trò chơi ngẫu nhiên có chi phí tham gia < blockreward đều khá công bằng.
+Kết luận: Phương pháp sử dụng blockhash để làm nguồn ngẫu nhiên cho trò jackpot hoặc bất kỳ trò chơi ngẫu nhiên có chi phí tham gia < blockreward hoặc giải thưởng < blockreward/(xác xuất trúng) đều khá công bằng.
