@@ -42,3 +42,12 @@ xluffy:
   location: In the shell
   intro: >
     I'm a ghost...
+
+khoai:
+  username: khoai
+  avatar: /assets/images/avatars/khoai.jpeg
+  cover: /assets/images/covers/casper.jpg
+  name: Khoai
+  location: In the shell
+  intro: >
+    I'm a ghost...
