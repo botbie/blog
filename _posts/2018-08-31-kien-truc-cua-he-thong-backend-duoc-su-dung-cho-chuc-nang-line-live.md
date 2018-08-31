@@ -1,7 +1,7 @@
 ---
 layout: post
 cover: 'assets/images/covers/casper.jpg'
-title: Splunk vs Elastic Stack - Bạn chọn bộ công cụ nào để quản lý logs?
+title: Kiến trúc của hệ thống backend được sử dụng cho chức năng LINE LIVE
 date: 2018-08-31
 tags: [architect, bài dịch, backend]
 author: tiennv147
