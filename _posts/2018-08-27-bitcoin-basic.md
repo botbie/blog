@@ -18,3 +18,5 @@ Giới thiệu bitcoin cơ bản
 * [Block hashing algorithm](../../../2016/06/18/bitcoin-block-hashing-algorithm)
 * [Bitcoin genesis block](../../../2016/06/16/bitcoin-genesis-block)
 * [Bitcoin address](../../../2016/06/15/bitcoin-address)
+
+* [Giải thích về bitcoin cho trẻ năm tuổi](/2016/11/09/chua-hieu-ve-bitcoin-sau-day-la-bai-giai-thich-ma-tre-5-tuoi-cung-hieu-duoc)
