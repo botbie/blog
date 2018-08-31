@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/media/brexit.jpg'
+cover: 'assets/images/covers/casper.jpg'
 title: Chưa hiểu về bitcoin? Sau đây là bài giải thích mà trẻ 5 tuổi cũng hiểu được.
 date: 2016-09-30
 tags: [bitcoin]
