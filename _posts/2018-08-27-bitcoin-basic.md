@@ -12,6 +12,7 @@ description: >
 Giới thiệu bitcoin cơ bản
 
 * [Bitcoin là gì](../../../2016/06/26/bitcoin-la-gi)
+* [Bitcoin mining](../../../2016/06/14/bitcoin-mining)
 * [Block hashing algorithm](../../../2016/06/18/bitcoin-block-hashing-algorithm)
 * [Bitcoin genesis block](../../../2016/06/16/bitcoin-genesis-block)
 * [Bitcoin address](../../../2016/06/15/bitcoin-address)
