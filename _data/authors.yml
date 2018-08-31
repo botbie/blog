@@ -51,3 +51,12 @@ khoai:
   location: In the shell
   intro: >
     I'm a ghost...
+
+phuongcute:
+  username: phuongcute
+  avatar: /assets/images/avatars/phuongcute.png
+  cover: /assets/images/covers/casper.jpg
+  name: Phương bếu
+  location: In the shell
+  intro: >
+    I'm a ghost...
