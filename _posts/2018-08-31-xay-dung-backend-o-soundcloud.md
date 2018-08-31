@@ -182,9 +182,10 @@ Source: Tech Blog SoundCloud
 
 [Building Products at SoundCloud—Part II: Breaking the Monolith](https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-2-breaking-the-monolith)
 
-[https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-3-microservices-in-scala-and-finagle](https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-3-microservices-in-scala-and-finagle)
+[Building Products at SoundCloud—Part III: Microservices in Scala and Finagle](https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-3-microservices-in-scala-and-finagle)
 
 Proof of work:
+
 [The web archive](https://web.archive.org/web/20170117054230/https://botbie.io/topic/50/xay-dung-backend-o-soundcloud-phan-3-su-dung-scala-va-finagle-xay-dung-microservices)
 
 [FB ref](https://vi-vn.facebook.com/babyrobots/posts/1023456101024609)
