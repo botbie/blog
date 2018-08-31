@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/media/brexit.jpg'
+cover: 'assets/images/covers/casper.jpg'
 title: Splunk vs Elastic Stack - Bạn chọn bộ công cụ nào để quản lý logs?
 date: 2016-09-04
 tags: [splunk, elastic, kibana]
