@@ -63,4 +63,4 @@ Hiện tại, đứa lớn chỉ mới hơn 3 tuổi, khi nào nó vào lớp 1 
 
 -------
 
-Xpost on https://www.kimkha.com/2018/09/vai-loi-ve-cong-nghe-giao-duc.html
+Xpost on [https://www.kimkha.com/2018/09/vai-loi-ve-cong-nghe-giao-duc.html](https://www.kimkha.com/2018/09/vai-loi-ve-cong-nghe-giao-duc.html)
