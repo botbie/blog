@@ -52,3 +52,5 @@ Mục đích của các quỹ hỗ tương là dành cho đa số những nhà �
 ### 10. Chỉ lắng nghe những ai bạn biết rõ và tin tưởng
 
 Hoàn toàn đồng ý với ý này. Các ý 11, 12, 13, 14 cũng có vẻ hợp lý hơn khi tác giả không phải miễn cưỡng ghép lời khuyên đầu tư vào yêu đương nữa mà tự do thể hiện ý kiến cá nhân của mình.
+
+XPOST https://t0an.blogspot.com/2018/09/khong-phai-au-tu.html
