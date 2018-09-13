@@ -69,3 +69,6 @@ Cần lưu ý rằng, ở cả những nước tiên tiến, cũng có nhiều h
 Lý do rất đơn giản, các bạn có nghĩ một người đã tìm hiểu cặn kẽ phương pháp đến thế này, hiểu rõ ngọn ngành,... thì có thể nào không đi cùng con mình theo cách học mới? Nghe có vẻ sai sai. Nhỉ!
 
 Tôi cho rằng, trách nhiệm của cha mẹ không phải là bao bọc con trong cái vỏ gọi là "khu an toàn", và bảo con "đừng bao giờ đi xa nhé, cái đó quá nguy hiểm cho con đó", trách nhiệm của họ là tìm hiểu thế giới xung quanh trẻ, và giới thiệu thế giới đó cho trẻ một cách lạc quan nhất. Trách nhiệm của họ còn phải minh định rõ ràng sự vật và hiện tượng, giữa nguyên nhân và kết quả,... ngay từ khi con của họ còn chưa biết gì, và họ phải giữ lối tư duy đó liên tục, để đứa con nhìn họ và tự học, và bám theo cách hành xử minh định đó mà phát triển khả năng cá nhân đứa trẻ.
+
+------
+Xpost on [https://www.kimkha.com/2018/09/tai-sao-toi-ung-ho-cong-nghe-giao-duc.html](https://www.kimkha.com/2018/09/tai-sao-toi-ung-ho-cong-nghe-giao-duc.html)
