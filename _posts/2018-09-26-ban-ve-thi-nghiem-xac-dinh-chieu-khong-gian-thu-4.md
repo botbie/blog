@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: 'assets/images/covers/cover2.jpg'
+cover: 'assets/media/Torus.png'
 title: Bàn về thí nghiệm xác định chiều không gian thứ 4?
 date: 2018-09-26
 tags: [science, theory]
