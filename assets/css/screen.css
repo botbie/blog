@@ -627,7 +627,10 @@ body.nav-opened .nav {
 }
 
 .nav ul {
-    padding: 90px 9% 5%;
+    margin-top: 90px;
+    padding: 0 9% 5%;
+    height: 82%;
+    overflow-y: scroll;
     list-style: none;
     counter-reset: item;
 }
