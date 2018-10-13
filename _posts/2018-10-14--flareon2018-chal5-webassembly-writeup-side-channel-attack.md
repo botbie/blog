@@ -3,6 +3,12 @@ layout: post
 date: '2018-10-14 02:05 +0700'
 published: false
 title: '[flareon2018] chal5 WebAssembly writeup: side channel attack'
+author: Khoai
+tags:
+  - CTF
+  - WebAssembly
+  - Side channel attack
+description: nom nom
 ---
 ## Đọc đề
 Bài WebAssembly là một trang web nho nhỏ, một đoạn JavaScript vừa đủ gọn để gọi được viết bằng WebAssemly (tất nhiên rồi, đề nó vậy mà). Đoạn JavaScript nhỏ xinh để gọi như sau:
