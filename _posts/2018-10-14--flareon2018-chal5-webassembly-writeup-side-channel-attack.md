@@ -7,7 +7,7 @@ title: '[flareon2018] chal5 WebAssembly writeup: side channel attack'
 ## Đọc đề
 Bài WebAssembly là một trang web nho nhỏ, một đoạn JavaScript vừa đủ gọn để gọi được viết bằng WebAssemly (tất nhiên rồi, đề nó vậy mà). Đoạn JavaScript nhỏ xinh để gọi như sau:
 
-~~~~
+```js
 fetch("test.wasm").then(response =>
   response.arrayBuffer()
 ).then(bytes =>
@@ -51,8 +51,7 @@ fetch("test.wasm").then(response =>
         document.getElementById("container").innerText = "💩";
     }
 });
-
-~~~~
+```
 
 Đoạn code nhỏ xinh dễ đọc, dễ hiểu và lâu ra kết quả này như sau:
 1. Lấy paramater truyền từ biến **"q"** nhập vào trên URL.
@@ -67,7 +66,7 @@ Với vài dòng Google tối thiểu bạn có thể thoi thóm hi vọng decom
 ![flaron18_wasm_02.png]({{site.baseurl}}/assets/media/flaron18_wasm_02.png)
 
 Đoạn mã giả với đầy những ký tự bí ẩn dạng như thế này:
-~~~~
+```c
 static u32 Match(u32 p0, u32 p1, u32 p2, u32 p3) {
   u32 l0 = 0, l1 = 0, l2 = 0, l3 = 0, l4 = 0, l5 = 0, l6 = 0, l7 = 0, 
       l8 = 0, l9 = 0, l10 = 0, l11 = 0, l12 = 0, l13 = 0, l14 = 0, l15 = 0, 
@@ -92,7 +91,7 @@ static u32 Match(u32 p0, u32 p1, u32 p2, u32 p3) {
   i32_store((&memory), (u64)(i0 + 16), i1);
   i0 = l2;
   i1 = p3;
-~~~~
+```
 
 Trong một sự nổ lực, mình Google xem các tiền bối đi trước nói chuyện với các bài WASM thế nào, mọi thứ đều thật đẹp khi mình đọc thấy một writeup dài vài cây số [ở đây](https://github.com/balsn/ctf_writeup/tree/master/20180421-*ctf#wasm-sces60107), những hi vọng tốt lành nhanh chóng tan đi khi writeup bắt đầu bằng hơn 900 dòng mã C rồi bạn ấy dễ dàng phát biểu một dòng đầy thần kỳ.
 > The first thing come out in my mind is that It's TEA.
@@ -106,7 +105,7 @@ Mình tìm ra công cụ có cái tên rất cute là [wasabi](https://github.co
 
 **wasabi** hỗ trợ đếm từng loại instruction, do chưa biết nên đếm loại nào, mình code đoạn cho đếm từng loại.
 
-~~~~
+```js
 /*
  * User-facing API for dynamic analyses.
  */
@@ -206,12 +205,12 @@ Wasabi.analysis = {
     },
 
 };
-~~~~
+```
 
 Các challenge của flareon đều có flag là một cái email. Nên mình lập một whitelist các ký tự có thể thuộc flag.
 Đầu tiên cần chạy thử nghiệm, với từng ký tự thử xem hướng side channel này có khả thi không. Đoạn code dò của mình sau:
 
-~~~~
+```js
 .then(results => {
     instance = results.instance;
   /// comment
@@ -248,14 +247,14 @@ Các challenge của flareon đều có flag là một cái email. Nên mình l�
     printSA(ch);
   }
 });
-~~~~
+```
 
 Bằng cách quan sát kết quả xuất ra, ta có thể nhận ra 1 ký tự cho kết quả cho kết quả đếm khác các ký tự còn lại, ký tự đầu tiên là: **w**
 ![flaron18_wasm_03.png]({{site.baseurl}}/assets/media/flaron18_wasm_03.png)
 
 Bằng cách tiếp tục nới rộng ra, ta có thể tìm ra flag. Ta biết flag của flag là như thường lệ là một cái email, vậy ký tự space không tồn tại trong đó. Đoạn code hoàn chỉnh để tự tìm flag như sau:
 
-~~~~
+```js
 .then(results => {
     instance = results.instance;
     /// comment
@@ -311,7 +310,7 @@ Bằng cách tiếp tục nới rộng ra, ta có thể tìm ra flag. Ta biết 
   }
   console.log("flag: ", cur);
 });
-~~~~
+```
 
 Kết quả chạy:
 ![flaron18_wasm_04.png]({{site.baseurl}}/assets/media/flaron18_wasm_04.png)
