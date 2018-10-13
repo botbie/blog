@@ -1,7 +1,7 @@
 ---
 layout: post
 date: '2018-10-14 02:05 +0700'
-published: false
+published: true
 title: '[flareon2018] chal5 WebAssembly writeup: side channel attack'
 author: Khoai
 tags:
