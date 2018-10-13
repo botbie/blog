@@ -214,12 +214,8 @@ Các challenge của flareon đều có flag là một cái email. Nên mình l�
 ~~~~
 .then(results => {
     instance = results.instance;
-
-    let a = new Uint8Array([
-        0xE4, 0x47, 0x30, 0x10, 0x61, 0x24, 0x52, 0x21, 0x86, 0x40, 0xAD, 0xC1, 0xA0, 0xB4, 0x50, 0x22, 0xD0, 0x75, 0x32, 0x48, 0x24, 0x86, 0xE3, 0x48, 0xA1, 0x85, 0x36, 0x6D, 0xCC, 0x33, 0x7B, 0x6E, 0x93, 0x7F, 0x73, 0x61, 0xA0, 0xF6, 0x86, 0xEA, 0x55, 0x48, 0x2A, 0xB3, 0xFF, 0x6F, 0x91, 0x90, 0xA1, 0x93, 0x70, 0x7A, 0x06, 0x2A, 0x6A, 0x66, 0x64, 0xCA, 0x94, 0x20, 0x4C, 0x10, 0x61, 0x53, 0x77, 0x72, 0x42, 0xE9, 0x8C, 0x30, 0x2D, 0xF3, 0x6F, 0x6F, 0xB1, 0x91, 0x65, 0x24, 0x0A, 0x14, 0x21, 0x42, 0xA3, 0xEF, 0x6F, 0x55, 0x97, 0xD6
-    ]);
+  /// comment
   
-
   function run(key) {
       var q = key;
       resetSA();
@@ -253,3 +249,74 @@ Các challenge của flareon đều có flag là một cái email. Nên mình l�
   }
 });
 ~~~~
+
+Bằng cách quan sát kết quả xuất ra, ta có thể nhận ra 1 ký tự cho kết quả cho kết quả đếm khác các ký tự còn lại, ký tự đầu tiên là: **w**
+![flaron18_wasm_03.png]({{site.baseurl}}/assets/media/flaron18_wasm_03.png)
+
+Bằng cách tiếp tục nới rộng ra, ta có thể tìm ra flag. Ta biết flag của flag là như thường lệ là một cái email, vậy ký tự space không tồn tại trong đó. Đoạn code hoàn chỉnh để tự tìm flag như sau:
+
+~~~~
+.then(results => {
+    instance = results.instance;
+    /// comment
+
+  function run(key) {
+      var q = key;
+      resetSA();
+      // let b = new Uint8Array(new TextEncoder().encode(getParameterByName("q")));
+      let b = new Uint8Array(new TextEncoder().encode(key));
+      let pa = wasm_alloc(instance, 0x200);
+      wasm_write(instance, pa, a);
+
+      let pb = wasm_alloc(instance, 0x200);
+      wasm_write(instance, pb, b);
+
+    
+      if (instance.exports.Match(pa, a.byteLength, pb, b.byteLength) == 1) {
+          // PARTY POPPER
+          document.getElementById("container").innerText = "🎉";
+          window.stop();
+      } else {
+          // PILE OF POO
+          document.getElementById("container").innerText = "💩";
+          return getSAStr();
+      }
+  }
+
+  var choices = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789-~!@#$%^&*()_+[]\{}|;':<>?/,."
+  var cur = "";
+  for (var pos = 0; pos < 50; pos++) {
+    // console.log("key_len:", pos);
+    var i;
+    var countSA = null;
+    for (i = 0; i < choices.length; i++) {
+        var ch = choices.charAt(i);
+        var q = cur + ch;
+        var trySA = run(q);
+        if (countSA == null) {
+          // set on first sight
+          countSA = trySA;
+        }
+        if (countSA != trySA) {
+          cur += ch;
+          console.log("-> " + cur);
+          break;
+        }
+      }
+
+      if (i == choices.length) {
+        console.log("flag on len: " + pos);
+        break;
+      }
+  }
+  console.log("flag: ", cur);
+});
+~~~~
+
+Kết quả chạy:
+![flaron18_wasm_04.png]({{site.baseurl}}/assets/media/flaron18_wasm_04.png)
+
+Thử lại phát:
+![flaron18_wasm_05.png]({{site.baseurl}}/assets/media/flaron18_wasm_05.png)
+
+Bingo 😄
