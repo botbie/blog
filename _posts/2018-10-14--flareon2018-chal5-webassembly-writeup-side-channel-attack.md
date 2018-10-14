@@ -1,9 +1,10 @@
 ---
 layout: post
+cover: 'assets/media/flaron18_wasm_02.png'
 date: '2018-10-14 02:05 +0700'
 published: true
 title: '[flareon2018] chal5 WebAssembly writeup: side channel attack'
-author: Khoai
+author: khoai
 tags:
   - CTF
   - WebAssembly
@@ -74,8 +75,8 @@ Với vài dòng Google tối thiểu bạn có thể thoi thóm hi vọng decom
 Đoạn mã giả với đầy những ký tự bí ẩn dạng như thế này:
 ```c
 static u32 Match(u32 p0, u32 p1, u32 p2, u32 p3) {
-  u32 l0 = 0, l1 = 0, l2 = 0, l3 = 0, l4 = 0, l5 = 0, l6 = 0, l7 = 0, 
-      l8 = 0, l9 = 0, l10 = 0, l11 = 0, l12 = 0, l13 = 0, l14 = 0, l15 = 0, 
+  u32 l0 = 0, l1 = 0, l2 = 0, l3 = 0, l4 = 0, l5 = 0, l6 = 0, l7 = 0,
+      l8 = 0, l9 = 0, l10 = 0, l11 = 0, l12 = 0, l13 = 0, l14 = 0, l15 = 0,
       l16 = 0, l17 = 0, l18 = 0, l19 = 0, l20 = 0, l21 = 0, l22 = 0, l23 = 0;
   FUNC_PROLOGUE;
   u32 i0, i1, i2, i3, i4;
@@ -220,7 +221,7 @@ Các challenge của flareon đều có flag là một cái email. Nên mình l�
 .then(results => {
     instance = results.instance;
   /// comment
-  
+
   function run(key) {
       var q = key;
       resetSA();
@@ -232,7 +233,7 @@ Các challenge của flareon đều có flag là một cái email. Nên mình l�
       let pb = wasm_alloc(instance, 0x200);
       wasm_write(instance, pb, b);
 
-    
+
       if (instance.exports.Match(pa, a.byteLength, pb, b.byteLength) == 1) {
           // PARTY POPPER
           document.getElementById("container").innerText = "🎉";
@@ -276,7 +277,7 @@ Bằng cách tiếp tục nới rộng ra, ta có thể tìm ra flag. Ta biết 
       let pb = wasm_alloc(instance, 0x200);
       wasm_write(instance, pb, b);
 
-    
+
       if (instance.exports.Match(pa, a.byteLength, pb, b.byteLength) == 1) {
           // PARTY POPPER
           document.getElementById("container").innerText = "🎉";
