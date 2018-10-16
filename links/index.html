@@ -6,14 +6,20 @@ current: links
 ---
 
 {% for key in site.data.links %}
-{% assign url = key[0] %}
-{% assign meta = key[1] %}
+{% assign channel = key[0] %}
+{% assign list = key[1] %}
 <article class="post link">
   <header class="post-header">
-    <h2 class="post-title"><a href="{{ url }}">{{ meta.title }}</a></h2>
+    <h3 class="post-title"><a href="https://botbie.slack.com/messages/{{ channel }}">#{{ channel }}</a></h3>
   </header>
   <section class="post-excerpt link">
-    <p>{{ meta.description | strip_html }}</p>
+    <ul>
+      {% for item in list %}
+      {% assign url = item[0] %}
+      {% assign meta = item[1] %}
+      <li><a href="{{ url }}">{{ meta.title }}</a>: {{ meta.description }}</li>
+      {% endfor %}
+    </ul>
   </section>
 </article>
 {% endfor %}
