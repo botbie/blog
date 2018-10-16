@@ -931,6 +931,10 @@ body.nav-opened .nav {
     word-wrap: break-word;
 }
 
+.post.link {
+    padding-bottom: 0;
+}
+
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 /*.post:after {*/
@@ -960,6 +964,10 @@ body:not(.post-template) .post-title {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.7em;
+}
+
+.post-excerpt.link p {
+  white-space: pre-wrap;
 }
 
 .read-more {
