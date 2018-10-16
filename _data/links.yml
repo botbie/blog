@@ -1,10 +1,10 @@
 blockchain:
-  - https://github.com/tari-labs/tari-university:
+  - url: https://github.com/tari-labs/tari-university
     title: Tari Labs University
     description: Repository of blockchain university of Tari Labs, initialized by Monero team.
 
 general:
-  - https://winderresearch.com/a-comparison-of-serverless-frameworks-for-kubernetes-openfaas-openwhisk-fission-kubeless-and-more/:
+  - url: https://winderresearch.com/a-comparison-of-serverless-frameworks-for-kubernetes-openfaas-openwhisk-fission-kubeless-and-more/
     title: A Comparison of Serverless Frameworks for Kubernetes
     description: This provides a comparison and recommendation for a Serverless framework for the Kubernetes platform.
 
