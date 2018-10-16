@@ -15,9 +15,7 @@ current: links
   <section class="post-excerpt link">
     <ul>
       {% for item in list %}
-      {% assign url = item[0] %}
-      {% assign meta = item[1] %}
-      <li><a href="{{ url }}">{{ meta.title }}</a>: {{ meta.description }}</li>
+      <li><a href="{{ item.url }}">{{ item.title }}</a>: {{ item.description }}</li>
       {% endfor %}
     </ul>
   </section>
