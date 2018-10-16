@@ -29,7 +29,8 @@ bundle exec jekyll serve
 5. Access local server at: `http://localhost:4000/`
 
 ## How to become a contributor?
-Like normal open source project on Github, you should fork `https://github.com/botbie/blog`, make changes and create a Pull Request.
+
+Like normal open source project on Github, you could fork [`https://github.com/botbie/blog`](https://github.com/botbie/blog), make changes and create a Pull Request.
 
 If you are a new contributor, you must register your profile by adding an entry in `_data/authors.yml`, for example:
 ```
