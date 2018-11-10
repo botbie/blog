@@ -69,3 +69,12 @@ tiennv147:
   location: In the shell
   intro: >
     I'm a ghost...
+    
+sherry:
+  username: sherry
+  avatar: /assets/images/avatars/casper.png
+  cover: /assets/images/covers/casper.jpg
+  name: Trâm Anh
+  location: In the shell
+  intro: >
+    I'm a ghost...
