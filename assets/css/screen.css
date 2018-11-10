@@ -627,7 +627,10 @@ body.nav-opened .nav {
 }
 
 .nav ul {
-    padding: 90px 9% 5%;
+    margin-top: 90px;
+    padding: 0 9% 5%;
+    height: 82%;
+    overflow-y: scroll;
     list-style: none;
     counter-reset: item;
 }
@@ -928,6 +931,10 @@ body.nav-opened .nav {
     word-wrap: break-word;
 }
 
+.post.link {
+    padding-bottom: 0;
+}
+
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 /*.post:after {*/
@@ -957,6 +964,10 @@ body:not(.post-template) .post-title {
     margin: 0;
     font-size: 0.9em;
     line-height: 1.7em;
+}
+
+.post-excerpt.link p {
+  white-space: pre-wrap;
 }
 
 .read-more {

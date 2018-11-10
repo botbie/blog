@@ -1,0 +1,23 @@
+---
+layout: page
+title: Useful links
+cover: '/assets/images/covers/cover7.jpg'
+current: links
+---
+
+{% for key in site.data.links %}
+{% assign channel = key[0] %}
+{% assign list = key[1] %}
+<article class="post link">
+  <header class="post-header">
+    <h3 class="post-title"><a href="https://botbie.slack.com/messages/{{ channel }}">#{{ channel }}</a></h3>
+  </header>
+  <section class="post-excerpt link">
+    <ul>
+      {% for item in list %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a>: {{ item.description }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endfor %}
