@@ -9,17 +9,29 @@ description: >
   Concurrency pattern là những design pattern sử dụng trong lập trình đa luồng.
 ---
 
-The active object design pattern decouples method execution from method invocation for objects that each reside in their own thread of control.[1] The goal is to introduce concurrency, by using asynchronous method invocation and a scheduler for handling requests.
+### Đầu tiên là UML
 
-Mẫu thiết kế gồm sáu phần:
+![UML tu act-obj cua Douglas C. Schmidt](/assets/images/posts/2018-11-14/act-obj-DouglasCSchmidt.png)
+
+
+Mẫu thiết kế gồm những phần sau:
 
 - Proxy cung cấp public interface cho client gọi trực tiếp 
-- Interface định nghĩa các phương thức của active object
-- Danh sách các request chờ xử lý từ client
+- Method request interface định nghĩa các phương thức của active object
+- Activation Queue chứa danh sách các request chờ xử lý từ client
 - Một scheduler sẽ ra quyết định request nào sẽ được xử lý tiếp theo
+- Hàm callback hoặc một Future để client nhận kết quả
 - Phần cài đặt các phương thức của active object
-- Hàm callback hoặc một biến để client nhận kết quả
 
+
+Hình màu đẹp chôm từ stack overflow
+
+![Active object pattern](https://i.stack.imgur.com/bLo5h.gif)
+
+### Hoạt động 
+Khi Client gửi một request tới proxy, proxy trả về Object Future sẽ dc dùng để nhận kết quả của active object (nếu có). Đồng thời tạo một MethodRequest chứa yêu cầu xử lý của client, đẩy vào Queue. Scheduler sẽ tuần tự lấy các request từ queue ra và call. hàm call sẽ thực thi các phương thức của Servant đồng thời trả về kết quả cho client thông qua Future.
+
+### Ví dụ dễ hiểu 
 Ví dụ một lớp java bình thường:
 ```
 class MyClass {
@@ -109,12 +121,19 @@ public class MyClass {
 
 Như vậy, active object tự nó có riêng một thread, và các tác vụ bên ngoài yêu cầu sẽ được đẩy vào một blocking queue nội bộ. Thread chỉ cần bốc ra tuần tự và xử lý. Phiên bản Active Object hoàn toàn thread-safe. Dù cho doSomething và doSomethingElse có được gọi tuần tự hay song song, cuối cùng chúng sẽ vẫn dc xử lý tuần tự.
 
-Notes:
-    Các biến nội bộ của object không thể truy cập/thay đổi trực tiếp từ bên ngoài
-    
+### Sử dụng
 
-Refs:
+* Active Object pattern đã được dùng để thiết kế các [Object Request Broker](https://en.wikipedia.org/wiki/Object_request_broker), như CORBA
+[OMG98b] và DCOM [Box97]
+* [ACE Framework](https://en.wikipedia.org/wiki/Adaptive_Communication_Environment) là một framework opensource được dùng trong lập trình mạng
+* [Actors](https://en.wikipedia.org/wiki/Actor_model)
 
-[Wikipedia](https://en.wikipedia.org/wiki/Active_object)
-[Prefer Using Active Objects Instead of Naked Threads - Herb Sutter](http://www.drdobbs.com/parallel/prefer-using-active-objects-instead-of-n/225700095)
-[Java Active Objects A Proposal by Allen Holub](https://pragprog.com/magazines/2013-05/java-active-objects)
+
+### Refs:
+
+* [Wikipedia](https://en.wikipedia.org/wiki/Active_object)
+* [Prefer Using Active Objects Instead of Naked Threads - Herb Sutter](http://www.drdobbs.com/parallel/prefer-using-active-objects-instead-of-n/225700095)
+* [Java Active Objects A Proposal by Allen Holub](https://pragprog.com/magazines/2013-05/java-active-objects)
+* [Active Objects Design Pattern - Jeremiahd Jordan](https://www.slideshare.net/jeremiahdjordan/active-object-design-pattern)
+* [Explain “Active-object” pattern - Bence Pattogato](https://stackoverflow.com/questions/41676343/explain-active-object-pattern)
+* [Active Object -  Douglas C. Schmidt](http://www.laputan.org/pub/sag/act-obj.pdf) - nên đọc nếu muốn hiểu sâu hơn
