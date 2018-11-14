@@ -16,17 +16,17 @@ description: >
 
 Mẫu thiết kế gồm những phần sau:
 
+- Servant là đối tượng gốc có các phương thức client muốn gọi thực thi
 - Proxy cung cấp public interface cho client gọi trực tiếp 
 - Method request interface định nghĩa các phương thức của active object
 - Activation Queue chứa danh sách các request chờ xử lý từ client
 - Một scheduler sẽ ra quyết định request nào sẽ được xử lý tiếp theo
 - Hàm callback hoặc một Future để client nhận kết quả
-- Phần cài đặt các phương thức của active object
-
 
 Hình màu đẹp chôm từ stack overflow
 
 ![Active object pattern](https://i.stack.imgur.com/bLo5h.gif)
+
 
 ### Hoạt động 
 Khi Client gửi một request tới proxy, proxy trả về Object Future sẽ dc dùng để nhận kết quả của active object (nếu có). Đồng thời tạo một MethodRequest chứa yêu cầu xử lý của client, đẩy vào Queue. Scheduler sẽ tuần tự lấy các request từ queue ra và call. hàm call sẽ thực thi các phương thức của Servant đồng thời trả về kết quả cho client thông qua Future.
