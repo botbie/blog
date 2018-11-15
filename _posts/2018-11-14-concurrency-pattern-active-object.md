@@ -121,6 +121,15 @@ public class MyClass {
 
 Như vậy, active object tự nó có riêng một thread, và các tác vụ bên ngoài yêu cầu sẽ được đẩy vào một blocking queue nội bộ. Thread chỉ cần bốc ra tuần tự và xử lý. Phiên bản Active Object hoàn toàn thread-safe. Dù cho doSomething và doSomethingElse có được gọi tuần tự hay song song, cuối cùng chúng sẽ vẫn dc xử lý tuần tự.
 
+### Ưu nhược điểm:
+#### Ưu điểm
+* Tách bạch gọi hàm và thực thi hàm, dễ cài đặt
+* Gọi hàm bất đồng bộ: client không nhất thiết phải chờ đến khi hàm thực thi xong.
+* Kết hợp sử dụng nhiều active object có thể tăng khả năng xử lý song song của hệ thống.
+#### Nhược điểm
+* Hiệu suất thấp hơn: so với các phương thức đồng bộ khác, pattern yêu cầu nhiều xử lý hơn để gọi hàm.
+* Khó debug hơn đối với những chương trình có active object 
+
 ### Sử dụng
 
 * Active Object pattern đã được dùng để thiết kế các [Object Request Broker](https://en.wikipedia.org/wiki/Object_request_broker), như CORBA
@@ -136,4 +145,5 @@ Như vậy, active object tự nó có riêng một thread, và các tác vụ b
 * [Java Active Objects A Proposal by Allen Holub](https://pragprog.com/magazines/2013-05/java-active-objects)
 * [Active Objects Design Pattern - Jeremiahd Jordan](https://www.slideshare.net/jeremiahdjordan/active-object-design-pattern)
 * [Explain “Active-object” pattern - Bence Pattogato](https://stackoverflow.com/questions/41676343/explain-active-object-pattern)
-* [Active Object -  Douglas C. Schmidt](http://www.laputan.org/pub/sag/act-obj.pdf) - nên đọc nếu muốn hiểu sâu hơn
+* [Active Object -  Douglas C. Schmidt](http://www.laputan.org/pub/sag/act-obj.pdf)
+* [Active Object - R. Greg Lavender and Douglas C. Schmidt](https://www.dre.vanderbilt.edu/~schmidt/PDF/Active-Objects.pdf)
