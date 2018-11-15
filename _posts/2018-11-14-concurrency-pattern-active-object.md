@@ -9,7 +9,7 @@ description: >
   Concurrency pattern là những design pattern sử dụng trong lập trình đa luồng.
 ---
 
-Active Object là một Concurrency design pattern sử dụng trong lập trình đa luồng, nó tách bạch lời gọi hàm và thực thi của các đối tượng. Mỗi đối tượng Active Object sở hữu một luồng riêng để thực thi tác vụ, một scheduler quản lý thứ tự thực hiện tác vụ, nhờ đó cung cấp lời gọi hàm bất đồng bộ để giải quyết vấn đề tương tranh (concurrency) trong tính toán song song.
+Active Object là một design pattern sử dụng trong lập trình đa luồng, nó tách bạch lời gọi hàm và thực thi của các đối tượng. Mỗi đối tượng Active Object sở hữu một luồng riêng để thực thi tác vụ, một scheduler quản lý thứ tự thực hiện tác vụ, nhờ đó cung cấp lời gọi hàm bất đồng bộ để giải quyết vấn đề tương tranh (concurrency) trong tính toán song song.
 
 ![UML tu act-obj cua Douglas C. Schmidt](/assets/images/posts/2018-11-14/act-obj-DouglasCSchmidt.png)
 
