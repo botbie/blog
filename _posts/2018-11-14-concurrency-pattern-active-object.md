@@ -122,10 +122,12 @@ public class MyClass {
 Như vậy, active object tự nó có riêng một thread, và các tác vụ bên ngoài yêu cầu sẽ được đẩy vào một blocking queue nội bộ. Thread chỉ cần bốc ra tuần tự và xử lý. Phiên bản Active Object hoàn toàn thread-safe. Dù cho doSomething và doSomethingElse có được gọi tuần tự hay song song, cuối cùng chúng sẽ vẫn dc xử lý tuần tự.
 
 ### Ưu nhược điểm:
+
 #### Ưu điểm
 * Tách bạch gọi hàm và thực thi hàm, dễ cài đặt
 * Gọi hàm bất đồng bộ: client không nhất thiết phải chờ đến khi hàm thực thi xong.
 * Kết hợp sử dụng nhiều active object có thể tăng khả năng xử lý song song của hệ thống.
+
 #### Nhược điểm
 * Hiệu suất thấp hơn: so với các phương thức đồng bộ khác, pattern yêu cầu nhiều xử lý hơn để gọi hàm.
 * Khó debug hơn đối với những chương trình có active object 
