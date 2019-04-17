@@ -11,7 +11,7 @@ description: >
 
 ## 1. Bên trong Integer.toString(int)
 
-cú pháp: 
+Cú pháp: 
 ```
 public static String toString(int i)
 ```
