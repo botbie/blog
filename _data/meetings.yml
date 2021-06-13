@@ -5,7 +5,6 @@
     - name: MakerDAO and DAI
       presenter: Sơn
       slide:
-      extra:
 
 - session: 06-06-2021
   recording: https://mega.nz/file/ioJF2Y5C#t-2UvecYLJTdX-F7B5EufO-F5Zqk2admLFf08XViBhU
@@ -14,9 +13,37 @@
     - name: Matic network (Polygon)
       presenter: Tuong
       slide: https://docs.google.com/presentation/d/11P8kj_HaRDxzUBC2HJ8qGNqQwJHSpBQC/edit
-      extra:
     - name: Stable coin
       presenter: Jaken
       slide: https://drive.google.com/drive/u/0/folders/1ndBwBg36en5Y00TtmfQayMfxhDvY5u8g
       extra: <a href="https://www.canva.com/design/DAEgVIV-2Ls/PxqZFutIHfG9CJCXOM9fUw/view">Canva Link</a>
 
+- session: 29-05-2021
+  recording: https://mega.nz/file/X05X1I4Y#JH-UUxkBrarke3YEiyN1Nd-d626czSkS207kNT1QB3Q
+  chat: https://mega.nz/file/n9ABGQjS#LdjlyNUOQsgedsT6hloWsbEu8XwNAznSq1KI__DJfX4
+  talks:
+    - name: ETH 2.0
+      presenter: Jaken
+      slide: https://docs.google.com/presentation/d/1S3QcnQi3zCRwY9IIBFELVVnmTgswAQDI4-WwqvN9LD0/edit
+    - name: FIRO
+      presenter: Hana
+      slide: https://drive.google.com/drive/u/0/folders/1ndBwBg36en5Y00TtmfQayMfxhDvY5u8g
+    - name: DeFi in the economic
+      presenter: Kha
+      slide: https://www.canva.com/design/DAEft-DCfW4/hTC2QDqQB0doHhW2HGkqww/view
+
+- session: 22-05-2021
+  recording: https://mega.nz/file/exAQVbDY#VRcRB9y4p6U8CWShUO1xvV_E3lYmzvU0sH1o8A3A4Ms
+  chat: https://mega.nz/file/7sBHzaga#G6T808pRr94tTI92Cr9Q7cBvEifbUCSdkavT1fybC9M
+  talks:
+    - name: Yield Farming
+      presenter: Jaken
+      slide: https://docs.google.com/presentation/d/1O0JKmBxEtsfwHfZQ6203ulAyd6eiMFQkNXvb6KOfqdo/edit
+
+- session: 28-02-2021
+  recording: https://mega.nz/file/fhQ3WC5I#7i1g30ifjcifzRp7BKVgWzjqFtfUXXauTNl-IQCU5g8
+  chat: https://mega.nz/file/nhISgZxD#E_D_EEz4gqJUlFbHHDUxKUN58AjpHmsb17xOJzO2Vbc
+  talks:
+    - name: DeFi overview
+      presenter: Jaken
+      slide: https://docs.google.com/presentation/d/1KNqVPepk5q75_RoYh07tUoq8hIBXhetYKgXnR_8k-Rg/edit

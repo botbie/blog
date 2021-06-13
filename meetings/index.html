@@ -2,7 +2,7 @@
 layout: page
 title: Meetings
 cover: '/assets/images/covers/cover7.jpg'
-current: links
+current: meetings
 ---
 
 {% for meeting in site.data.meetings %}
@@ -16,7 +16,12 @@ current: links
     <p>Talks:</p>
     <ul>
       {% for talk in meeting.talks %}
-      <li><a href="{{ talk.slide }}">{{ talk.name }} - {{ talk.presenter }}</a>{% if talk.extra %} ({{ talk.extra }}){% endif %}</li>
+      <li>
+        {% if talk.slide %}<a href="{{ talk.slide }}">{% endif %}
+          {{ talk.name }} - {{ talk.presenter }}
+        {% if talk.slide %}</a>{% endif %}
+        {% if talk.extra %}&nbsp;({{ talk.extra }}){% endif %}
+      </li>
       {% endfor %}
     </ul>
   </section>
