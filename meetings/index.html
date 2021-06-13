@@ -1,0 +1,24 @@
+---
+layout: page
+title: Meetings
+cover: '/assets/images/covers/cover7.jpg'
+current: links
+---
+
+{% for meeting in site.data.meetings %}
+<article class="post link">
+  <header class="post-header">
+    <h3 class="post-title">{{ meeting.session }}</h3>
+  </header>
+  <section class="post-excerpt link">
+    <p><a href="{{ meeting.recording }}">Recording</a></p>
+    <p><a href="{{ meeting.chat }}">Chat history</a></p>
+    <p>Talks:</p>
+    <ul>
+      {% for talk in meeting.talks %}
+      <li><a href="{{ talk.slide }}">{{ talk.name }} - {{ talk.presenter }}</a>{% if talk.extra %} ({{ talk.extra }}){% endif %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</article>
+{% endfor %}
