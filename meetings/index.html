@@ -25,8 +25,8 @@ current: meetings
     <h3 class="post-title">Session {{ meeting.session }}</h3>
   </header>
   <section class="post-excerpt link">
-    <p><a href="{{ meeting.recording }}">Recording</a></p>
-    <p><a href="{{ meeting.chat }}">Chat history</a></p>
+    {% if meeting.recording %}<p><a href="{{ meeting.recording }}">Recording</a></p>{% endif %}
+    {% if meeting.chat %}<p><a href="{{ meeting.chat }}">Chat history</a></p>{% endif %}
     <p>Talks:</p>
     <ul>
       {% for talk in meeting.talks %}
