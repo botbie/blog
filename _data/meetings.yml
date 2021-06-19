@@ -1,14 +1,31 @@
 
-- session: 19-06-2021 (upcoming)
+- session: Upcoming...
   recording:
   chat:
   talks:
-    - name: Binance Coin from token to &num;4 coin
-      presenter: Jaken
+    - name: NFT Overview
+      presenter: Huyền
+      slide:
+    - name: Chia coin (XCH) - ổ cứng xanh
+      presenter: Thiên
       slide:
     - name: Bitcoin Law of El Salvador
       presenter: Kha
       slide:
+    - name: Binance Coin from token to &num;4 coin
+      presenter: Jaken
+      slide:
+    - name: Tại sao tôi không đầu tư bitcoin
+      presenter: Phan
+      slide:
+
+- session: 19-06-2021
+  recording: https://mega.nz/file/6tJSXTLT#Mko1Z2XhGEIjk7Ym1AAZ9OM5_eef7j-n_QKSrlzLq88
+  chat: https://mega.nz/file/jth0SJaY#cAkpGL5LfqWgl7_LngPW5ynZ06LNGHr_HdxokbLQzYw
+  talks:
+    - name: IRON Finance Bank Run
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEhvisz-Sk/JRJ_zzXXinxAx0q8jR_13A/view
 
 - session: 12-06-2021
   recording: https://mega.nz/file/6tJSXTLT#Mko1Z2XhGEIjk7Ym1AAZ9OM5_eef7j-n_QKSrlzLq88
