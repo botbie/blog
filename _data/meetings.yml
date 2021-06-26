@@ -3,9 +3,6 @@
   recording:
   chat:
   talks:
-    - name: NFT Overview
-      presenter: Huyền
-      slide:
     - name: Chia coin (XCH) - ổ cứng xanh
       presenter: Thiên
       slide:
@@ -17,6 +14,14 @@
       slide:
     - name: Tại sao tôi không đầu tư bitcoin
       presenter: Phan
+      slide:
+
+- session: 26-06-2021
+  recording: https://mega.nz/file/fkhyzJoD#kHNIXXnylPARzL8y4ZYOAHJ8uJ9BVSmBA-otYfwykr8
+  chat: https://mega.nz/file/apoCVLDS#sKZoAQ2OvJX396ZJAHU6gyxUd0HscYnt8xSNpfIhOlk
+  talks:
+    - name: NFT Overview
+      presenter: Huyền
       slide:
 
 - session: 19-06-2021
