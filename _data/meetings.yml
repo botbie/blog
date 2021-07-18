@@ -9,12 +9,20 @@
     - name: Bitcoin Law of El Salvador
       presenter: Kha
       slide:
-    - name: Binance Coin from token to &num;4 coin
+    - name: Cardano project
       presenter: Jaken
       slide:
     - name: Tại sao tôi không đầu tư bitcoin
       presenter: Phan
       slide:
+
+- session: 17-07-2021
+  recording: https://mega.nz/file/GwBgDZqD#gbnbc-CqWzD95i4Bl02s3zb3gvpDvmYfhu0x_aSwh8Y
+  chat: https://mega.nz/file/D8IymDDI#LVo8OuOYG0WHVCsjZWFX9FZYUybw4zFC7b3fwcGV4eA
+  talks:
+    - name: Binance Coin from token to &num;4 coin
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEiNlXZ_2w/4yAYCd0DRBU5ykS79I7WDw/view
 
 - session: 26-06-2021
   recording: https://mega.nz/file/fkhyzJoD#kHNIXXnylPARzL8y4ZYOAHJ8uJ9BVSmBA-otYfwykr8
