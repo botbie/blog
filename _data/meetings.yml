@@ -6,15 +6,23 @@
     - name: Chia coin (XCH) - ổ cứng xanh
       presenter: Thiên
       slide:
-    - name: Bitcoin Law of El Salvador
-      presenter: Kha
-      slide:
-    - name: Cardano project
+    - name: Ripple project
       presenter: Jaken
       slide:
     - name: Tại sao tôi không đầu tư bitcoin
       presenter: Phan
       slide:
+
+- session: 24-07-2021
+  recording: https://mega.nz/file/i1Q33SyL#MouXt-_PTzUpDMyGzfJuMydHdJAdMvhtmxPR32niCQM
+  chat: https://mega.nz/file/D8QTEKhZ#8yj0J4HabIF-pVVvYWqI3_hYhpRdoq4bxmmB7praSNE
+  talks:
+    - name: Bitcoin Law of El Salvador
+      presenter: Kha
+      slide: https://www.canva.com/design/DAEhohZFHDg/NKhuNvwBKy1HqYcCAnTKvg/view
+    - name: Cardano project
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEkpahIZYE/mteS8twVhiqmEcnS0RSx0g/view
 
 - session: 17-07-2021
   recording: https://mega.nz/file/GwBgDZqD#gbnbc-CqWzD95i4Bl02s3zb3gvpDvmYfhu0x_aSwh8Y
