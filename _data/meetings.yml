@@ -3,14 +3,38 @@
   recording:
   chat:
   talks:
-    - name: Chia coin (XCH) - ổ cứng xanh
-      presenter: Thiên
-      slide:
-    - name: Ripple project
+    - name: To be defined
       presenter: Jaken
       slide:
-    - name: Tại sao tôi không đầu tư bitcoin
-      presenter: Phan
+
+- session: 11-08-2021
+  recording: https://mega.nz/file/ixphQKCD#S9bW8ezVOeEnnemhQ2mwa2_agfYNzZt3hKkdc3TTXI0
+  chat: https://mega.nz/file/bwhhRAgB#sYlHDHZOhZ4QfLs9KBdton_e0HmIRJOitANNapte19o
+  talks:
+    - name: Polkadot
+      presenter: Fiona
+      slide: https://docs.google.com/presentation/d/1iwcAsqfEoYpkSkQioE33Q12xz9GtcpR698mqIP6qWr4/edit
+    - name: Chainlink
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEo9M2QIfg/0w94lDlXjgZjKyrVdEeXJw/view
+
+- session: 28-08-2021
+  recording: https://mega.nz/file/y8IHDCgI#NGvwO2axz5yrV5CHLJz_fFEcuxeNhwd3AWqOMjmKep0
+  chat: https://mega.nz/file/itY3kArB#__qTBpuFOnW8xxxnVTCN_c1CVDXNYWk5Mmz17ou7Sak
+  talks:
+    - name: Dogecoin
+      presenter: Jaken
+      slide:
+
+- session: 14-08-2021
+  recording: https://mega.nz/file/b8ITgaCS#OSNT3hRHCUeDTgKuQvrivP5yfvw3fiq42kPM5_COABU
+  chat: https://mega.nz/file/joAhAQIC#M2KKG07DhtpJXasynlziPL5-ZI2uPR1mfcoZnt8yLQ4
+  talks:
+    - name: Ripple
+      presenter: Jaken
+      slide:
+    - name: NEAR Protocol
+      presenter: Hà
       slide:
 
 - session: 07-08-2021
