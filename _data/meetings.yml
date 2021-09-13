@@ -3,7 +3,10 @@
   recording:
   chat:
   talks:
-    - name: To be defined
+    - name: Diem stable coin
+      presenter: Huyền
+      slide:
+    - name: Solana
       presenter: Jaken
       slide:
 
