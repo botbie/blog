@@ -27,7 +27,7 @@
   talks:
     - name: Dogecoin
       presenter: Jaken
-      slide:
+      slide: https://www.canva.com/design/DAEp2vQ9Bhw/view
 
 - session: 14-08-2021
   recording: https://mega.nz/file/b8ITgaCS#OSNT3hRHCUeDTgKuQvrivP5yfvw3fiq42kPM5_COABU
@@ -35,7 +35,7 @@
   talks:
     - name: Ripple
       presenter: Jaken
-      slide:
+      slide: https://www.canva.com/design/DAEp2sF6dr8/view
     - name: NEAR Protocol
       presenter: Hà
       slide:
