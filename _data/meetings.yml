@@ -3,14 +3,39 @@
   recording:
   chat:
   talks:
-    - name: Diem stable coin
-      presenter: Huyền
+    - name: Celo protocol
+      presenter: Thien Le
       slide:
-    - name: Solana
+    - name: Avalanche
       presenter: Jaken
       slide:
+    - name: 15-min crypto news
+      presenter: Kha
+      slide:
 
-- session: 11-08-2021
+- session: 25-09-2021
+  recording: https://mega.nz/file/zgBXgaxS#UAP_iywLwvE04E9lyXD_1IQYy_V1-mxQ2Vww5__uPOw
+  chat: https://mega.nz/file/3wJzDArb#bF55fc79g55UJzGmyYfZWxdEdlZQsjF6wqWFKL_p2fk
+  talks:
+    - name: Uniswap
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEq1b6VB9U/oFnbruu6GurVW7FskjPoBA/view
+    - name: Crabada
+      presenter: Phú
+      slide: https://drive.google.com/file/d/18aBC0aI1mokjw-9ht_y8jTu8L2_ZsVHl/view
+
+- session: 18-09-2021
+  recording: https://mega.nz/file/K4oAQYJK#En76pBKm8Yhnfcwd6sT3IV2Z-N7V98hLD9PvPfQe-Rw
+  chat: https://mega.nz/file/KxpEmIIC#mAtCSYiTwEp3MTssy0woChtyiMBCv-Efp8MQypayEIk
+  talks:
+    - name: Diem stable coin
+      presenter: Huyền
+      slide: https://docs.google.com/presentation/d/1FoCqb3eeyYwNlIp6JjcCJ19gcWPYDmqb/edit?rtpof=true
+    - name: Solana
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAEqVY5XeJI/eKVyHlU5eKXg8QtFnFAyOg/view
+
+- session: 11-09-2021
   recording: https://mega.nz/file/ixphQKCD#S9bW8ezVOeEnnemhQ2mwa2_agfYNzZt3hKkdc3TTXI0
   chat: https://mega.nz/file/bwhhRAgB#sYlHDHZOhZ4QfLs9KBdton_e0HmIRJOitANNapte19o
   talks:
