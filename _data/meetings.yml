@@ -24,6 +24,16 @@
       presenter: Panelist
       extra: <ul><li>Minh Nhật - Botbie Moderator</li><li>Lê Minh Hưng - Noron </li><li>Lê Đức Thiên - SigilNet</li><li> Trần Thanh Huyền - Journalist</li><li> Nguyễn Minh Sơn - Kite Capital</li><li>Đường Tích Vĩ - Culu Artwork</li></ul>
 
+- session: 30-10-2021
+  recording: https://mega.nz/file/N0ZVVYhR#eBju4S_2g0SumdMaCqVTChbf7a64aAs7LaICDfq5lKg
+  chat: https://mega.nz/file/ctwDiYZa#o3kgVKoceI_lQeLEKh32ZspSlGUFhSi0NMwzh460TpE
+  talks:
+    - name: Side disscussion - VR to metaverse
+      presenter: Kim Kha
+    - name: Bettery
+      presenter: Fedor
+      slide: https://www.dropbox.com/s/vk8z4htdvh0395e/Bettery%20Pitch%20Deck.pdf?dl=0
+
 - session: 25-09-2021
   recording: https://mega.nz/file/zgBXgaxS#UAP_iywLwvE04E9lyXD_1IQYy_V1-mxQ2Vww5__uPOw
   chat: https://mega.nz/file/3wJzDArb#bF55fc79g55UJzGmyYfZWxdEdlZQsjF6wqWFKL_p2fk
