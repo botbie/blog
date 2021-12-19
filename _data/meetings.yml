@@ -3,15 +3,9 @@
   recording:
   chat:
   talks:
-    - name: Celo protocol
-      presenter: Thien Le
-      slide:
-    - name: Avalanche
-      presenter: Jaken
-      slide:
-    - name: 15-min crypto news
-      presenter: Kha
-      slide:
+    - name: Waiting request
+      presenter: Waiting volunteer
+      slide: Waiting design
 
 - session: 11-12-2021
   recording: https://mega.nz/file/98xWET7K#lzOGdQVBlpGPc1MYYf8UUHNOLG9oRA0pTjLxOj3PHhE
@@ -33,6 +27,17 @@
     - name: Bettery
       presenter: Fedor
       slide: https://www.dropbox.com/s/vk8z4htdvh0395e/Bettery%20Pitch%20Deck.pdf?dl=0
+
+- session: 02-10-2021
+  recording: https://mega.nz/file/ItZ3lSoD#M1pXEW2StDdj_kQyOgci1mFQuboRHPQasQ4tlGfpch4
+  chat: https://mega.nz/file/Z0Yl1SZB#DwDE2G7isxJYADRVifnh8wLxVoms9obJN9OHAbyt9bg
+  talks:
+    - name: Celo, Mobile-First DeFi Platform 
+      presenter: Thien Le
+      slide: https://www.canva.com/design/DAErkqp-C0c/UKD7qgua5OKsvT0qA1KREQ/view?utm_content=DAErkqp-C0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
+    - name: Avalanche - the internet of finance
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAErT_UnULw/6jKzNsKWXbCiFM5-jSD4lg/view?utm_content=DAErT_UnULw&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
 
 - session: 25-09-2021
   recording: https://mega.nz/file/zgBXgaxS#UAP_iywLwvE04E9lyXD_1IQYy_V1-mxQ2Vww5__uPOw
