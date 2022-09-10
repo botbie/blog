@@ -7,6 +7,28 @@
       presenter: Waiting volunteer
       slide: Waiting design
 
+
+- session: 27-08-2022
+  recording: https://mega.nz/file/x0QFBYoD#zlA4ANYnNR-rY8iJGXvfNyE8ctir65dTlGPpHkwuREM
+  talks:
+    - name: DOT ecosystem
+      presenter: hovanquyvt
+      slide:
+
+- session: 27-08-2022
+  recording:
+  talks:
+    - name: DOT ecosystem
+      presenter: hovanquyvt
+      slide:
+
+- session: 20-08-2022
+  recording: https://mega.nz/file/VspC2TDb#OQzH-IS8-unmjis44oAfk1oeYH7SGWwMH3mD_MPHpaM
+  talks:
+    - name: Tron Network
+      presenter: Jaken
+      slide: https://www.canva.com/design/DAFJlFGexH8/F_zc3uJ9MU2BufWyGReJtg/view?utm_content=DAFJlFGexH8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 - session: 09-04-2022
   recording: https://mega.nz/file/t541nagL#gQu7WI0iStsgNpC2KgYBaw2vULzH80vp-mDnm94t03Y
   talks:
@@ -39,7 +61,7 @@
   recording: https://mega.nz/file/ItZ3lSoD#M1pXEW2StDdj_kQyOgci1mFQuboRHPQasQ4tlGfpch4
   chat: https://mega.nz/file/Z0Yl1SZB#DwDE2G7isxJYADRVifnh8wLxVoms9obJN9OHAbyt9bg
   talks:
-    - name: Celo, Mobile-First DeFi Platform 
+    - name: Celo, Mobile-First DeFi Platform
       presenter: Thien Le
       slide: https://www.canva.com/design/DAErkqp-C0c/UKD7qgua5OKsvT0qA1KREQ/view?utm_content=DAErkqp-C0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton
     - name: Avalanche - the internet of finance
