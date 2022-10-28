@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  botbie-blog:
+    build:
+      context: ./
+      args:
+        BUNDLER_VERSION: "1.17.2"
+    volumes:
+      - ./:/blog
+    command: bundle exec jekyll serve -H 0.0.0.0
+    ports:
+      - "4000:4000"
