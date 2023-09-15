@@ -22,6 +22,12 @@ $ bundle install
 ```
 bundle exec jekyll serve
 ```
+
+Or you can run the local server by using docker-compose:
+```
+$ docker-compose up -d
+```
+
 5. Access local server at: `http://localhost:4000/`
 
 ## How to become a contributor?
