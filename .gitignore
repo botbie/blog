@@ -4,7 +4,6 @@
 # Jekyll build
 /_site/
 .jekyll-metadata
-#Gemfile.lock
 
 # webstorm
 .idea/
@@ -27,5 +26,4 @@ test/tmp
 test/version_tmp
 tmp
 vendor
-Gemfile.lock
 .jekyll-cache
