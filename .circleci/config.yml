@@ -34,6 +34,9 @@ jobs:
       - restore_cache:
           key: *cached_key
       - run: bundle exec jekyll build
+      - add-ssh-keys:
+          fingerprints:
+            - "SHA256:aeyNGCt4RUekdPWs0v1QvzdhB56lF5Fuj2nAlmGb18s"
       - run: ./scripts/deploy.sh
 
 # workflows
