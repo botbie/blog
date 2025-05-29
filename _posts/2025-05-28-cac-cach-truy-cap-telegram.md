@@ -20,7 +20,7 @@ Hiện tại, theo Luật An Ninh Mạng thì các nhà mạng đã bắt đầu
 
 ### **Đối với Desktop:**
 
-Step 1\. Bạn có thể dùng extension của Chrome (Urban VPN, Zenmate, etc)
+Step 1\. Bạn có thể dùng extension của Chrome (Urban VPN, Zenmate, etc), hoặc cài Opera browser và bật chế độ VPN
 
 Ví dụ: [Link](https://chromewebstore.google.com/detail/urban-vpn-proxy/eppiocemhmnlbhjplcgkofciiegomcon?pli=1)
 
@@ -30,6 +30,9 @@ Step 2\. Bạn bật Connect với USA
 
 Step 3\. Bạn truy cập vào Telegram dưới dạng web: [https://web.telegram.org/](https://web.telegram.org/)
 
+
+Ví dụ telegram web với Opera:
+![](/assets/images/posts/2025-05-28/image9.png)
 
 ### **Đối với Mobile:**
 
@@ -43,7 +46,19 @@ Sau đó bật VPN ở USA, và mở app telegram trên điện thoại để s�
 ![](/assets/images/posts/2025-05-28/image4.jpg)
 
 
-## **Cách 2: Sử dụng VPN**
+## **Cách 2: Sử dụng Proxy**
+
+### Proxy từ VPN:
+
+Đôi khi bật vpn sẽ làm mạng chậm hơn do các ứng dụng khác cũng đi qua vpn, trong khi ta chỉ cần telegram dùng vpn thôi. Bạn có thể cấu hình như sau:
+
+Ví dụ với vpn 1.1.1.1
+
+Bật chức năng proxy của vpn và cài đặt cổng proxy. Vào **Setting** chọn **Advanced** hoặc **Proxy Mode**
+![](/assets/images/posts/2025-05-28/image7.jpg)
+
+Cài đặt proxy:
+![](/assets/images/posts/2025-05-28/image8.jpg)
 
 👉Đối với Windows:
 Chọn **Settings** (Cài đặt), sau đó chọn **Network & Internet** (Mạng & Internet) và nhấp vào **Proxy**.
@@ -51,10 +66,8 @@ Chọn **Settings** (Cài đặt), sau đó chọn **Network & Internet** (Mạn
 **Sau đó nhập các thông tin sau:**
 
 ```
-<ip address>
-<port>
-<username>
-<password>
+address: localhost
+port: cổng proxy vừa cấu hình
 ```
 
 👉Đối với Macbook
@@ -66,12 +79,12 @@ Bật Proxy và chọn Add Proxy
 **Sau đó nhập các thông tin sau:**
 
 ```
-<ip address>
-<port>
-<username>
-<password>
+address: localhost
+port: cổng proxy vừa cấu hình
 ```
 
-Nếu đã truy cập được Telegram, bạn có thể vào channel này trên Telegram có hàng ngàn Proxy server, để bạn có thể chuyển đổi một cách dễ dàng
+### Proxy mtproto theo chuẩn telegram
+
+Trên telegram có các kênh chia sẻ proxy theo chuẩn mtproto của tele, hàng ngàn proxy servers được chia sẻ và cập nhật liên tục. Người dùng có thể chuyển đổi một cách dễ dàng chỉ bằng một cú click chuột. Bạn có thể search google hoặc nếu đã truy cập được Telegram, bạn có thể vào channel này:
 [https://t.me/ProxyMTProto](https://t.me/ProxyMTProto)
 ![](/assets/images/posts/2025-05-28/image2.png)
