@@ -28,7 +28,7 @@ Ví dụ: [Link](https://chromewebstore.google.com/detail/urban-vpn-proxy/eppioc
 Step 2\. Bạn bật Connect với USA
 ![](/assets/images/posts/2025-05-28/image1.png)
 
-Step 3\. Bạn truy cập vào Telegram dưới dang web: [https://web.telegram.org/](https://web.telegram.org/)
+Step 3\. Bạn truy cập vào Telegram dưới dạng web: [https://web.telegram.org/](https://web.telegram.org/)
 
 
 ### **Đối với Mobile:**
@@ -51,10 +51,10 @@ Chọn **Settings** (Cài đặt), sau đó chọn **Network & Internet** (Mạn
 **Sau đó nhập các thông tin sau:**
 
 ```
-45.252.59.156
-6182
-swembwzo
-vacsqead67h9
+<ip address>
+<port>
+<username>
+<password>
 ```
 
 👉Đối với Macbook
@@ -66,10 +66,10 @@ Bật Proxy và chọn Add Proxy
 **Sau đó nhập các thông tin sau:**
 
 ```
-45.252.59.156
-6182
-swembwzo
-vacsqead67h9
+<ip address>
+<port>
+<username>
+<password>
 ```
 
 Nếu đã truy cập được Telegram, bạn có thể vào channel này trên Telegram có hàng ngàn Proxy server, để bạn có thể chuyển đổi một cách dễ dàng
