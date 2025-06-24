@@ -1,0 +1,46 @@
+---
+layout: blank_with_analytics
+current: games-emo
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Emotion Detection</title>
+    <link rel="stylesheet" href="model_js/style.css">
+    <!-- Load TensorFlow.js and OpenCV.js -->
+    <script async src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script async src="https://docs.opencv.org/4.8.0/opencv.js"></script>
+</head>
+<body>
+    <h1>🎭 Face Emotion Detector</h1>
+    <p id="status">Loading models and libraries, please wait...</p>
+
+    <div class="container">
+        <!-- Live Camera Section -->
+        <div class="section">
+            <h2>Live Camera Feed</h2>
+            <div class="camera-container">
+                <canvas id="videoCanvas" width="640" height="480"></canvas>
+                <canvas id="overlayCanvas" width="640" height="480"></canvas>
+                <video id="video" autoplay muted playsinline></video>
+            </div>
+            <div class="buttons">
+                <button id="startButton">▶️ Start Camera</button>
+                <button id="stopButton" disabled>⏹️ Stop Camera</button>
+            </div>
+        </div>
+
+        <!-- Image Upload Section -->
+        <div class="section">
+            <h2>Or Upload an Image</h2>
+            <input type="file" id="fileInput" accept="image/*">
+            <div id="imageResult"></div>
+        </div>
+    </div>
+
+    <script src="model_js/script.js"></script>
+</body>
+</html>
