@@ -78,3 +78,12 @@ sherry:
   location: In the shell
   intro: >
     I'm a ghost...
+
+blu3:
+  username: blu3
+  avatar: /assets/images/avatars/blu3.jpg
+  cover: /assets/images/covers/casper.jpg
+  name: blu3
+  location: In the shell
+  intro: >
+    I'm a ghost...
