@@ -1,6 +1,6 @@
 ---
 layout: post
-cover: "assets/images/covers/cover2.jpg"
+cover: "assets/images/covers/sqli.png"
 title: "[Nhàn cư] vi bất thiện (1)"
 date: 2025-08-27
 tags: [sql]
@@ -8,8 +8,6 @@ author: nguquen
 description: >
   Nhiều năm về trước, khi còn là 1 sinh viên thuần khiết, tôi từng là tay chơi nửa mùa trong thế giới security, tạm gọi là 1 security hobbyist đi. Đó là khoảng thời gian đáng nhớ, khi mà hội anh em botbie vẫn thường tụ tập ở các quán cà phê Sài Gòn, từ ngày mưa cho đến ngày nắng, từ những tối tan làm cũng như những ngày cuối tuần, chúng tôi cùng nhau tham gia những cuộc thi CTF (Capture The Flag) trong và ngoài nước, đổi lấy niềm vui nho nhỏ khi submit được 1 valid flag. Niềm vui đó trôi qua nhanh như những cơn gió cơm áo cuốn tôi đi, nhìn lại anh em ai cũng đã vợ (con), tôi thì cũng đã có những niềm đam mê mới...
 ---
-
-[Nhàn cư] vi bất thiện (1)
 
 Nhiều năm về trước, khi còn là 1 sinh viên thuần khiết, tôi từng là tay chơi nửa mùa trong thế giới security, tạm gọi là 1 security hobbyist đi. Đó là khoảng thời gian đáng nhớ, khi mà hội anh em botbie vẫn thường tụ tập ở các quán cà phê Sài Gòn, từ ngày mưa cho đến ngày nắng, từ những tối tan làm cũng như những ngày cuối tuần, chúng tôi cùng nhau tham gia những cuộc thi CTF (Capture The Flag) trong và ngoài nước, đổi lấy niềm vui nho nhỏ khi submit được 1 valid flag. Niềm vui đó trôi qua nhanh như những cơn gió cơm áo cuốn tôi đi, nhìn lại anh em ai cũng đã vợ (con), tôi thì cũng đã có những niềm đam mê mới.
 
