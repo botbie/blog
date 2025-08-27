@@ -1,6 +1,6 @@
 nguquen:
   username: nguquen
-  avatar: /assets/images/avatars/thien.png
+  avatar: /assets/images/avatars/thien.jpg
   cover: /assets/images/covers/thien.jpg
   name: Thien Le
   location: Nowhere
@@ -69,7 +69,7 @@ tiennv147:
   location: In the shell
   intro: >
     I'm a ghost...
-    
+
 sherry:
   username: sherry
   avatar: /assets/images/avatars/casper.png
