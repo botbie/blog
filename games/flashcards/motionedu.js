@@ -4,7 +4,10 @@ const canvasCtx = canvasElement.getContext('2d');
 const statusIndicator = document.getElementById('statusIndicator');
 const gestureIndicator = document.getElementById('gestureIndicator');
 const categoryScreen = document.getElementById('categoryScreen');
+const modeScreen = document.getElementById('modeScreen');
 const learningScreen = document.getElementById('learningScreen');
+const testScreen = document.getElementById('testScreen');
+const resultsScreen = document.getElementById('resultsScreen');
 
 let gestureRecognizer;
 const runningMode = "VIDEO";
@@ -15,6 +18,17 @@ let flashcards = [];
 let currentCategory = null;
 let currentCardIndex = 0;
 let showingGerman = true;
+
+// Mode selection state
+let selectedMode = null; // 'learn' or 'test'
+let currentModeIndex = 0; // 0 = learn, 1 = test
+
+// Test mode state
+let testQuestions = [];
+let currentTestIndex = 0;
+let testScore = 0;
+let correctAnswer = null; // 'left' or 'right'
+let answeredCorrectly = null;
 
 // Category navigation state
 let currentCategoryIndex = 0;
@@ -29,7 +43,8 @@ const GESTURES = {
     'Open_Palm': '✋',
     'Victory': '✌️',
     'Closed_Fist': '✊',
-    'ILoveYou': '☝️'
+    'ILoveYou': '🤟',
+    'Pointing_Up': '☝️'
 };
 
 async function loadFlashcards() {
@@ -58,11 +73,10 @@ async function loadFlashcards() {
 }
 
 function extractCategories(data) {
-
     categorylist = data.categories;
     for (const item of categorylist) {
         flashcards_in_category = data[item];
-        cards =  [];
+        cards = [];
         for (const flashcard of flashcards_in_category) {
             cards.push(data.w2f[flashcard]);
         }
@@ -124,24 +138,224 @@ function selectCurrentCategory() {
 
 function selectCategory(categoryName) {
     currentCategory = categoryName;
-    category = categories.filter(category=> category.name===categoryName)[0];
+    category = categories.filter(category => category.name === categoryName)[0];
     flashcards = category.cards;
     currentCardIndex = 0;
     showingGerman = true;
 
+    // Show mode selection screen
     categoryScreen.style.display = 'none';
-    learningScreen.style.display = 'block';
+    modeScreen.style.display = 'block';
+    currentModeIndex = 0;
+    highlightMode(0);
+}
 
+function highlightMode(index) {
+    currentModeIndex = index;
+    const learnCard = document.getElementById('learnModeCard');
+    const testCard = document.getElementById('testModeCard');
+
+    learnCard.classList.remove('highlighted');
+    testCard.classList.remove('highlighted');
+
+    if (index === 0) {
+        learnCard.classList.add('highlighted');
+    } else {
+        testCard.classList.add('highlighted');
+    }
+}
+
+function selectMode(mode) {
+    selectedMode = mode;
+
+    if (mode === 'learn') {
+        startLearningMode();
+    } else if (mode === 'test') {
+        startTestMode();
+    }
+}
+
+function startLearningMode() {
+    modeScreen.style.display = 'none';
+    learningScreen.style.display = 'block';
+    currentCardIndex = 0;
+    showingGerman = true;
     updateCard();
 }
 
-window.backToCategories = function () {
+function startTestMode() {
+    modeScreen.style.display = 'none';
+    testScreen.style.display = 'block';
+
+    // Generate test questions
+    generateTestQuestions();
+    currentTestIndex = 0;
+    testScore = 0;
+    document.getElementById('scoreValue').textContent = testScore;
+    document.getElementById('totalQuestions').textContent = testQuestions.length;
+
+    showTestQuestion();
+}
+
+function generateTestQuestions() {
+    testQuestions = [];
+
+    // Shuffle the flashcards
+    const shuffled = [...flashcards].sort(() => Math.random() - 0.5);
+
+    for (let i = 0; i < Math.min(shuffled.length, 10); i++) {
+        const correctCard = shuffled[i];
+
+        // Get a random incorrect card from the same category
+        let incorrectCard;
+        do {
+            incorrectCard = flashcards[Math.floor(Math.random() * flashcards.length)];
+        } while (incorrectCard.german === correctCard.german);
+
+        // Randomly assign correct answer to left or right
+        const correctPosition = Math.random() < 0.5 ? 'left' : 'right';
+
+        testQuestions.push({
+            german: correctCard.german,
+            correctCard: correctCard,
+            incorrectCard: incorrectCard,
+            correctPosition: correctPosition
+        });
+    }
+}
+
+function showTestQuestion() {
+    if (currentTestIndex >= testQuestions.length) {
+        showTestResults();
+        return;
+    }
+
+    const question = testQuestions[currentTestIndex];
+    const leftCard = question.correctPosition === 'left' ? question.correctCard : question.incorrectCard;
+    const rightCard = question.correctPosition === 'right' ? question.correctCard : question.incorrectCard;
+
+    document.getElementById('testCategory').textContent = currentCategory;
+    document.getElementById('testQuestion').textContent = `Berühre ${question.german}`;
+    document.getElementById('testProgress').textContent = `Question ${currentTestIndex + 1} of ${testQuestions.length}`;
+
+    document.getElementById('leftImage').src = leftCard.image_url || leftCard.image_local;
+    document.getElementById('rightImage').src = rightCard.image_url || rightCard.image_local;
+
+    correctAnswer = question.correctPosition;
+    answeredCorrectly = null;
+
+    // Hide feedback
+    document.getElementById('testFeedback').style.display = 'none';
+
+    // Reset option styles
+    document.getElementById('leftOption').classList.remove('correct', 'wrong');
+    document.getElementById('rightOption').classList.remove('correct', 'wrong');
+
+    // Show test layout, hide results
+    document.querySelector('.test-layout').style.display = 'flex';
+}
+
+window.selectOption = function(option) {
+    if (answeredCorrectly !== null) return; // Already answered
+
+    const leftOption = document.getElementById('leftOption');
+    const rightOption = document.getElementById('rightOption');
+    const feedbackDiv = document.getElementById('testFeedback');
+    const feedbackContent = document.getElementById('feedbackContent');
+
+    if (option === correctAnswer) {
+        // Correct answer
+        answeredCorrectly = true;
+        testScore++;
+        document.getElementById('scoreValue').textContent = testScore;
+
+        if (option === 'left') {
+            leftOption.classList.add('correct');
+        } else {
+            rightOption.classList.add('correct');
+        }
+
+        feedbackContent.innerHTML = '<div class="feedback-correct">✓ Correct!</div>';
+    } else {
+        // Wrong answer
+        answeredCorrectly = false;
+
+        if (option === 'left') {
+            leftOption.classList.add('wrong');
+            rightOption.classList.add('correct');
+        } else {
+            rightOption.classList.add('wrong');
+            leftOption.classList.add('correct');
+        }
+
+        feedbackContent.innerHTML = '<div class="feedback-wrong">✗ Wrong!</div>';
+    }
+
+    feedbackDiv.style.display = 'block';
+
+    // Auto-advance after 1.5 seconds
+    setTimeout(() => {
+        currentTestIndex++;
+        showTestQuestion();
+    }, 1500);
+}
+
+function showTestResults() {
+    const percentage = Math.round((testScore / testQuestions.length) * 100);
+
+    let emoji = '🎉';
+    let message = 'Excellent!';
+
+    if (percentage < 50) {
+        emoji = '📚';
+        message = 'Keep practicing!';
+    } else if (percentage < 80) {
+        emoji = '👍';
+        message = 'Good job!';
+    }
+
+    // Update results screen
+    document.getElementById('resultsEmoji').textContent = emoji;
+    document.getElementById('resultsMessage').textContent = message;
+    document.getElementById('resultsScoreText').textContent = `${testScore} / ${testQuestions.length} (${percentage}%)`;
+
+    // Hide test screen, show results screen
+    testScreen.style.display = 'none';
+    resultsScreen.style.display = 'block';
+}
+
+window.backToCategories = function() {
     categoryScreen.style.display = 'block';
+    modeScreen.style.display = 'none';
     learningScreen.style.display = 'none';
+    testScreen.style.display = 'none';
+    resultsScreen.style.display = 'none';
+
     currentCategory = null;
+    selectedMode = null;
     flashcards = [];
     currentCategoryIndex = 0;
     highlightCategory(0);
+
+    // Reset test screen for next time
+    if (document.querySelector('.test-layout')) {
+        document.querySelector('.test-layout').style.display = 'flex';
+    }
+}
+
+window.retryTest = function() {
+    // Restart the test with the same category
+    resultsScreen.style.display = 'none';
+    testScreen.style.display = 'block';
+
+    // Generate new test questions
+    generateTestQuestions();
+    currentTestIndex = 0;
+    testScore = 0;
+    document.getElementById('scoreValue').textContent = testScore;
+    document.getElementById('totalQuestions').textContent = testQuestions.length;
+
+    showTestQuestion();
 }
 
 function updateCard() {
@@ -149,7 +363,6 @@ function updateCard() {
 
     const card = flashcards[currentCardIndex];
     const text = showingGerman ? card.german : card.english;
-    // Use image_url if available, otherwise fall back to image_local
     const imgurl = card.image_url || card.image_local;
 
     document.getElementById('category').textContent = currentCategory;
@@ -184,7 +397,7 @@ function flipCard() {
     updateCard();
 }
 
-window.toggleHelp = function () {
+window.toggleHelp = function() {
     const helpPanel = document.getElementById('helpPanel');
     helpPanel.classList.toggle('show');
 }
@@ -203,12 +416,16 @@ function handleGesture(gestureName, handLandmarks) {
     const now = Date.now();
     const emoji = GESTURES[gestureName] || '❓';
 
-    // Check if we're on category screen or learning screen
+    // Check current screen
     const onCategoryScreen = categoryScreen.style.display !== 'none';
+    const onModeScreen = modeScreen.style.display !== 'none';
+    const onLearningScreen = learningScreen.style.display !== 'none';
+    const onTestScreen = testScreen.style.display !== 'none';
+    const onResultsScreen = resultsScreen.style.display !== 'none';
 
-    // Pointing Up - go back to categories (only works on learning screen)
+    // ILoveYou - go back to categories (works everywhere except category screen)
     if (gestureName === 'ILoveYou') {
-        if (learningScreen.style.display !== 'none') {
+        if (!onCategoryScreen) {
             if (gestureName !== lastGesture || now - lastGestureTime >= GESTURE_COOLDOWN) {
                 showGesture('Categories', '☝️');
                 backToCategories();
@@ -255,7 +472,37 @@ function handleGesture(gestureName, handLandmarks) {
                 lastGestureTime = now;
                 break;
         }
-    } else {
+    } else if (onModeScreen) {
+        // Mode selection gestures
+        switch (gestureName) {
+            case 'Thumb_Up':
+                showGesture('Test Mode', '👍');
+                highlightMode(1);
+                lastGesture = gestureName;
+                lastGestureTime = now;
+                setTimeout(() => {
+                    selectMode('test');
+                }, 500);
+                break;
+
+            case 'Thumb_Down':
+                showGesture('Learn Mode', '👎');
+                highlightMode(0);
+                lastGesture = gestureName;
+                lastGestureTime = now;
+                setTimeout(() => {
+                    selectMode('learn');
+                }, 500);
+                break;
+
+            case 'Victory':
+                showGesture('Toggle Help', '✌️');
+                toggleHelp();
+                lastGesture = gestureName;
+                lastGestureTime = now;
+                break;
+        }
+    } else if (onLearningScreen) {
         // Learning screen gestures
         switch (gestureName) {
             case 'Thumb_Up':
@@ -285,6 +532,55 @@ function handleGesture(gestureName, handLandmarks) {
                 lastGesture = gestureName;
                 lastGestureTime = now;
                 break;
+        }
+    } else if (onResultsScreen) {
+        // Results screen gestures
+        switch (gestureName) {
+            case 'Closed_Fist':
+                showGesture('Try Again', '✊');
+                retryTest();
+                lastGesture = gestureName;
+                lastGestureTime = now;
+                break;
+
+            case 'Victory':
+                showGesture('Toggle Help', '✌️');
+                toggleHelp();
+                lastGesture = gestureName;
+                lastGestureTime = now;
+                break;
+        }
+    } else if (onTestScreen) {
+        // Test screen - use pointing finger to detect which side user is pointing at
+        if (answeredCorrectly === null) { // Only if not already answered
+            // For Closed_Fist or Pointing_Up, check hand position
+            if (gestureName === 'Pointing_Up') {
+                // Get the index finger tip position (landmark 8)
+                if (handLandmarks && handLandmarks.length > 8) {
+                    const fingerTip = handLandmarks[8];
+
+                    // Normalize coordinates (landmarks are 0-1, need to check which half of screen)
+                    // fingerTip.x is 0-1, where 0.5 is center
+                    if (fingerTip.x > 0.6) {
+                        // Pointing at left side
+                        showGesture('Select Left', '☝️');
+                        selectOption('left');
+                        lastGesture = gestureName;
+                        lastGestureTime = now;
+                    } else if (fingerTip.x < 0.4) {
+                        // Pointing at right side
+                        showGesture('Select Right', '☝️');
+                        selectOption('right');
+                        lastGesture = gestureName;
+                        lastGestureTime = now;
+                    }
+                }
+            } else if (gestureName === 'Victory') {
+                showGesture('Toggle Help', '✌️');
+                toggleHelp();
+                lastGesture = gestureName;
+                lastGestureTime = now;
+            }
         }
     }
 
