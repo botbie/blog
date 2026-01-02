@@ -25,11 +25,12 @@
             <div class="help-panel" id="helpPanel">
                 <h3>Gesture Controls</h3>
                 <ul id="helpContent">
-                    <li><strong>👍 Thumbs Up:</strong> Next card/category</li>
-                    <li><strong>👎 Thumbs Down:</strong> Previous card/category</li>
-                    <li><strong>✋ Open Palm:</strong> Flip card / Select category</li>
+                    <li><strong>👍 Thumbs Up:</strong> Next/Test mode/Right</li>
+                    <li><strong>👎 Thumbs Down:</strong> Previous/Learn mode/Left</li>
+                    <li><strong>✋ Open Palm:</strong> Flip card / Select</li>
+                    <li><strong>☝️ Point Finger:</strong> Touch item (Test mode)</li>
                     <li><strong>✌️ Victory:</strong> Toggle this help</li>
-                    <li><strong>☝️ I Love You:</strong> Back to categories</li>
+                    <li><strong>🤟 I Love You:</strong> Back to categories</li>
                 </ul>
             </div>
 
@@ -37,6 +38,26 @@
             <div class="category-screen" id="categoryScreen">
                 <h1 class="category-title">📚 Choose a Category</h1>
                 <div class="category-grid" id="categoryGrid"></div>
+            </div>
+
+            <!-- Mode Selection Screen -->
+            <div class="mode-screen" id="modeScreen" style="display: none;">
+                <h1 class="mode-title">Choose Learning Mode</h1>
+                <div class="mode-container">
+                    <div class="mode-card" id="learnModeCard">
+                        <div class="mode-icon">📖</div>
+                        <div class="mode-name">Learn</div>
+                        <div class="mode-description">Study flashcards at your own pace</div>
+                        <div class="mode-gesture">👎 Thumbs Down</div>
+                    </div>
+                    <div class="mode-card" id="testModeCard">
+                        <div class="mode-icon">✅</div>
+                        <div class="mode-name">Test</div>
+                        <div class="mode-description">Test your knowledge with images</div>
+                        <div class="mode-gesture">👍 Thumbs Up</div>
+                    </div>
+                </div>
+                <button class="back-button" onclick="backToCategories()">← Back to Categories</button>
             </div>
 
             <!-- Learning Screen -->
@@ -49,12 +70,55 @@
                     <button class="back-button" onclick="backToCategories()">← Back to Categories</button>
                 </div>
             </div>
+
+            <!-- Test Screen -->
+            <div class="test-screen" id="testScreen" style="display: none;">
+                <div class="test-layout">
+                    <!-- Left Image -->
+                    <div class="test-side left-side" id="leftOption">
+                        <img id="leftImage" class="test-image" src="" alt="option">
+                    </div>
+
+                    <!-- Center Content -->
+                    <div class="test-center">
+                        <div class="test-category" id="testCategory">Category Name</div>
+                        <div class="test-question" id="testQuestion">Berühre die Banane</div>
+                        <div class="test-progress" id="testProgress">Question 1 of 10</div>
+
+                        <div class="test-feedback" id="testFeedback" style="display: none;">
+                            <div class="feedback-content" id="feedbackContent"></div>
+                        </div>
+
+                        <div class="test-score" id="testScore">
+                            Score: <span id="scoreValue">0</span> / <span id="totalQuestions">0</span>
+                        </div>
+
+                        <button class="back-button" onclick="backToCategories()">← Back</button>
+                    </div>
+
+                    <!-- Right Image -->
+                    <div class="test-side right-side" id="rightOption">
+                        <img id="rightImage" class="test-image" src="" alt="option">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Test Results Screen -->
+            <div class="results-screen" id="resultsScreen" style="display: none;">
+                <div class="results-container">
+                    <div class="results-emoji" id="resultsEmoji">🎉</div>
+                    <div class="results-message" id="resultsMessage">Excellent!</div>
+                    <div class="results-score" id="resultsScoreText">10 / 10 (100%)</div>
+                    <div class="results-buttons">
+                        <button class="retry-button" onclick="retryTest()">✊ Try Again</button>
+                        <button class="back-button" onclick="backToCategories()">🤟 Back to Categories</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="motionedu.js">
-
-    </script>
+    <script src="motionedu.js"></script>
 </body>
 
 </html>
