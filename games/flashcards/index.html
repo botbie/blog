@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesture-Controlled German Flashcards</title>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.8/vision_bundle.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="fullscreen-container">
+        <video id="videoElement" autoplay playsinline></video>
+        <canvas id="canvasElement"></canvas>
+
+        <div class="overlay-ui">
+            <div class="top-bar">
+                <div class="status-badge" id="statusIndicator">Initializing...</div>
+                <div class="gesture-indicator" id="gestureIndicator" style="display: none;"></div>
+            </div>
+
+            <button class="help-toggle" onclick="toggleHelp()">❓</button>
+
+            <div class="help-panel" id="helpPanel">
+                <h3>Gesture Controls</h3>
+                <ul id="helpContent">
+                    <li><strong>👍 Thumbs Up:</strong> Next card/category</li>
+                    <li><strong>👎 Thumbs Down:</strong> Previous card/category</li>
+                    <li><strong>✋ Open Palm:</strong> Flip card / Select category</li>
+                    <li><strong>✌️ Victory:</strong> Toggle this help</li>
+                    <li><strong>☝️ I Love You:</strong> Back to categories</li>
+                </ul>
+            </div>
+
+            <!-- Category Selection Screen -->
+            <div class="category-screen" id="categoryScreen">
+                <h1 class="category-title">📚 Choose a Category</h1>
+                <div class="category-grid" id="categoryGrid"></div>
+            </div>
+
+            <!-- Learning Screen -->
+            <div class="learning-screen" id="learningScreen" style="display: none;">
+                <div class="flashcard-overlay">
+                    <div class="flashcard-category" id="category">Category Name</div>
+                    <img id="image" class="flashcard-image" src="" alt="flashcard image" style="display: none;">
+                    <div class="flashcard-text" id="text">Text</div>
+                    <div class="progress" id="progress">Card 1 of 10</div>
+                    <button class="back-button" onclick="backToCategories()">← Back to Categories</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="motionedu.js">
+
+    </script>
+</body>
+
+</html>
