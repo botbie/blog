@@ -1,0 +1,72 @@
+name: Deploy Jekyll site to Pages
+
+# Runs a full (non-safe) Jekyll build so the custom plugins under _plugins/
+# (jekyll-paginate-authors.rb, jekyll-paginate-tags.rb) are executed, then
+# publishes the result via the official Pages deployment action.
+#
+# Requires repo Settings -> Pages -> Source: "GitHub Actions".
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+# Minimum permissions required by actions/deploy-pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment; cancel in-progress runs but let a
+# currently deploying run finish so the Pages site is never left broken.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # Only run on the upstream botbie/blog repo; skip on forks.
+    if: github.repository == 'botbie/blog'
+    runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
+      BUNDLE_WITHOUT: development
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Match the Ruby version the existing Gemfile.lock was resolved against
+      # (see Dockerfile: FROM ruby:2.6). Bundler 1.13.6 in BUNDLED WITH is too
+      # old to be installed on modern rubygems, so we pin the last 1.x release
+      # compatible with Ruby 2.6.
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6'
+          bundler: '1.17.3'
+          bundler-cache: true
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+  deploy:
+    if: github.repository == 'botbie/blog'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
