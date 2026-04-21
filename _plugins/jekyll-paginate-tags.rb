@@ -84,14 +84,31 @@ module Jekyll
 
         # Generate paginated pages if necessary.
         #
+        # Tags whose names differ only in case or in characters that the slug
+        # function strips (e.g. "ctf" and "CTF", "WebAssembly" and "webassembly")
+        # are merged onto a single page — otherwise both generate to the same
+        # /tag/<slug>/ path and one silently overwrites the other, dropping the
+        # posts of the losing tag from the archive.
+        #
         # site - The Site.
         #
         # Returns nothing.
         def generate(site)
-          if site.config['paginate_tag_basepath']
-            for tag in site.tags.keys
-              paginate_tag(site, tag)
-            end
+          return unless site.config['paginate_tag_basepath']
+
+          tags_payload = site.site_payload['site']['tags']
+          groups = {}
+
+          tags_payload.each do |tag_name, posts|
+            slug = slugify_tag(tag_name)
+            next if slug.empty?
+            bucket = (groups[slug] ||= { names: [], posts: [] })
+            bucket[:names] << tag_name
+            bucket[:posts].concat(posts)
+          end
+
+          groups.each do |slug, bucket|
+            paginate_tag(site, canonical_name(bucket[:names]), slug, dedup(bucket[:posts]))
           end
         end
 
@@ -99,17 +116,15 @@ module Jekyll
         # directories (see paginate_tag_basepath and paginate_path config) for these tags,
         # e.g.: /tags/my-tag/page2/index.html, /tags/my-tag/page3/index.html, etc.
         #
-        # site     - The Site.
-        # tag - The tag to paginate.
+        # site      - The Site.
+        # tag       - Display name to expose to the layout as `page.tag`.
+        # slug      - URL slug, used to build the output directory.
+        # all_posts - Ordered list of post payloads to paginate.
         #
         # Returns nothing.
-        def paginate_tag(site, tag)
-          # Retrieve posts from that specific tag.
-          all_posts = site.site_payload['site']['tags'][tag]
-
+        def paginate_tag(site, tag, slug, all_posts)
           # Tag base path
-          tag_path = site.config['paginate_tag_basepath']
-          tag_path = tag_path.sub(':name', tag.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, ''))
+          tag_path = site.config['paginate_tag_basepath'].sub(':name', slug)
 
           # Count pages
           nb_pages = Pager.calculate_pages(all_posts, site.config['paginate'].to_i)
@@ -126,6 +141,39 @@ module Jekyll
             newpage.dir = Pager.paginate_path_tag(site, current_num_page, tag_path)
             site.pages << newpage
           end
+        end
+
+        private
+
+        # Slugify a tag name the same way URLs are built. Must stay in sync
+        # with the default Jekyll `slugify` Liquid filter used in the
+        # pagination partials so generated paths and rendered links match.
+        def slugify_tag(tag)
+          tag.to_s.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+        end
+
+        # Pick a canonical display name for a group of colliding tag strings.
+        # Preference order: exact all-lowercase variant (matches the URL slug
+        # visually), otherwise the first name encountered.
+        def canonical_name(names)
+          names.find { |n| n == n.downcase } || names.first
+        end
+
+        # Remove duplicate post payloads (a post tagged with both "CTF" and
+        # "ctf" would otherwise appear twice on the merged page), then sort
+        # newest-first to preserve archive ordering.
+        def dedup(posts)
+          seen = {}
+          unique = posts.reject do |post|
+            key = post['url'] || post.object_id
+            if seen[key]
+              true
+            else
+              seen[key] = true
+              false
+            end
+          end
+          unique.sort_by { |post| post['date'] || Time.at(0) }.reverse
         end
       end
 
