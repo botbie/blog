@@ -1,9 +1,14 @@
 # Jykell configuration
-#markdown: redcarpet
-#highlighter: pygments
 markdown: kramdown
 highlighter: rouge
 language: 'en-uk'
+
+# kramdown 2.x: GitHub-flavored markdown parser moved to a separate gem
+# (kramdown-parser-gfm). Enabling it preserves tables, strikethrough and
+# fenced-code handling that older posts may rely on.
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Website info
 name: 'Botbie Blog'

@@ -10,6 +10,7 @@ on:
   push:
     branches:
       - master
+  pull_request:
   workflow_dispatch:
 
 # Minimum permissions required by actions/deploy-pages.
@@ -25,9 +26,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    # Only run on the upstream botbie/blog repo; skip on forks.
-    if: github.repository == 'botbie/blog'
+  # Fork-safe build smoke test. Runs on pull_request events from anywhere
+  # (including forks) and on manual dispatch. Has no deploy side effects,
+  # so it's safe to leave unguarded.
+  check:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     env:
       JEKYLL_ENV: production
@@ -36,15 +39,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Match the Ruby version the existing Gemfile.lock was resolved against
-      # (see Dockerfile: FROM ruby:2.6). Bundler 1.13.6 in BUNDLED WITH is too
-      # old to be installed on modern rubygems, so we pin the last 1.x release
-      # compatible with Ruby 2.6.
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6'
-          bundler: '1.17.3'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+
+  build:
+    # Only run deploy pipeline on the upstream botbie/blog repo; skip on forks.
+    if: github.repository == 'botbie/blog' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    env:
+      JEKYLL_ENV: production
+      BUNDLE_WITHOUT: development
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Ruby version is read from .ruby-version. bundler-cache also installs
+      # gems and caches them across runs.
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
           bundler-cache: true
 
       - name: Configure Pages
@@ -60,7 +78,7 @@ jobs:
           path: ./_site
 
   deploy:
-    if: github.repository == 'botbie/blog'
+    if: github.repository == 'botbie/blog' && github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
